@@ -1,0 +1,57 @@
+# Carga histórica: descarga TODO el historial disponible de las tres fuentes.
+# Se lanza a mano una sola vez (pestaña "Actions" > "Carga histórica" > "Run workflow").
+# Tarda alrededor de una hora porque la OCDE solo permite 60 consultas por hora.
+name: Carga histórica
+
+on:
+  workflow_dispatch:
+    inputs:
+      anios_crs:
+        description: "Años del CRS a descargar (por ejemplo 1995-2024). Vacío = todos los disponibles."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  cargar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: OCDE (CRS) — ayuda oficial al desarrollo
+        run: |
+          if [ -n "${{ inputs.anios_crs }}" ]; then
+            python scripts/fetch_crs.py --force --years "${{ inputs.anios_crs }}"
+          else
+            python scripts/fetch_crs.py --force
+          fi
+      - name: BDNS — concesiones
+        run: python scripts/fetch_bdns.py
+      - name: IATI — actividades de AECID
+        run: python scripts/fetch_iati.py
+      - name: Resumen (manifest)
+        run: python scripts/build_manifest.py
+      - name: Guardar los datos en el repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && { echo "Sin cambios"; exit 0; }
+          git commit -m "Carga histórica de datos ($(date -u +%F))"
+          git push
+  publicar:
+    needs: cargar
+    uses: ./.github/workflows/publicar-web.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

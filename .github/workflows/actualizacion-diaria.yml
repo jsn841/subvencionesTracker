@@ -1,0 +1,55 @@
+# Actualización diaria: añade las concesiones nuevas de la BDNS y comprueba si la OCDE
+# o AECID han publicado datos nuevos. Si no hay cambios, no hace nada.
+name: Actualización diaria
+
+on:
+  schedule:
+    - cron: "17 5 * * *"   # todos los días a las 05:17 UTC (07:17 en verano en España)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: BDNS — concesiones nuevas
+        run: python scripts/fetch_bdns.py
+      - name: IATI — actividades de AECID
+        run: python scripts/fetch_iati.py
+        continue-on-error: true
+      - name: OCDE (CRS) — solo los lunes (publica una vez al año)
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python scripts/fetch_crs.py
+          else
+            echo "Hoy no es lunes: no se consulta la OCDE."
+          fi
+        continue-on-error: true
+      - name: Resumen (manifest)
+        run: python scripts/build_manifest.py
+      - name: Guardar los cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && { echo "Sin cambios"; exit 0; }
+          git commit -m "Actualización de datos ($(date -u +%F))"
+          git push
+  publicar:
+    needs: actualizar
+    uses: ./.github/workflows/publicar-web.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

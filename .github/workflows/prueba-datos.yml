@@ -1,0 +1,30 @@
+# TEMPORAL: prueba de los scripts con datos reales en la rama de desarrollo.
+name: prueba-datos
+on:
+  push:
+    branches: [site]
+    paths: [scripts/**, .github/workflows/prueba-datos.yml]
+permissions:
+  contents: write
+concurrency:
+  group: prueba
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python scripts/fetch_iati.py
+      - run: python scripts/fetch_crs.py --years 2023-2024 --force --pausa 20
+      - run: python scripts/fetch_bdns.py
+      - run: python scripts/build_manifest.py
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -qm "prueba: datos reales"
+          for i in 1 2 3 4; do git pull -q --rebase origin site && git push -q origin HEAD:site && break; sleep 5; done
