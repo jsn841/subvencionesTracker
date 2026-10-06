@@ -17,6 +17,7 @@ import re
 import time
 import urllib.parse
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date
 
 from common import DATA, http_get, log, now_iso, load_state, save_state, read_year, write_year
@@ -142,11 +143,19 @@ def main():
         e = encontrados.setdefault(c["id"], [c, [], None])
         e[1].append("Finalidad: Cooperación internacional para el desarrollo y cultural")
 
-    # 2) Convierte al formato común
+    # 2) Datos de cada convocatoria (finalidad, tipo, beneficiarios), con caché y 4 consultas en paralelo
+    pendientes = sorted({str(c.get("numeroConvocatoria")) for c, _, _ in encontrados.values() if c.get("numeroConvocatoria")} - set(cache))
+    log(f"Convocatorias nuevas a consultar: {len(pendientes)}")
+    with ThreadPoolExecutor(max_workers=4) as ex:
+        for k, _ in enumerate(ex.map(lambda n: convocatoria_info(cache, n), pendientes)):
+            if k and k % 500 == 0:
+                log(f"  {k} convocatorias consultadas")
+
+    # 3) Convierte al formato común
     nuevos = {}
     for cid, (c, crits, ubic) in encontrados.items():
         num = str(c.get("numeroConvocatoria") or "")
-        info = convocatoria_info(cache, num) if num else None
+        info = cache.get(num) if num else None
         ident, nombre, persona = separar_beneficiario(c.get("beneficiario"))
         p, pn, r = ubic or ("XUN", "País no especificado en la fuente", "Sin especificar")
         fecha = c.get("fechaConcesion") or ""
@@ -175,7 +184,7 @@ def main():
             "nota": None if persona or not ident else f"Identificador del beneficiario en la BDNS: {ident}",
         }
 
-    # 3) Fusión con lo ya guardado (nunca se borra)
+    # 4) Fusión con lo ya guardado (nunca se borra)
     por_anio = defaultdict(dict)
     for fn in os.listdir(os.path.join(DATA, "bdns")):
         if re.fullmatch(r"\d{4}\.json", fn):
