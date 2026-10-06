@@ -8,16 +8,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        part: [bdns, infoaod, iati, crs, odareader]
+        part: [bdns, infoaod, iati, crs]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - if: matrix.part != 'odareader'
-        run: python tools/probe.py ${{ matrix.part }}
-      - if: matrix.part == 'odareader'
-        run: |
-          pip install -q oda_reader || true
-          d=$(python -c "import oda_reader,os;print(os.path.dirname(oda_reader.__file__))")
-          grep -rnoE "https?://[^\"' ]+" $d | sort -u | head -80
-          grep -rn -i "crs" $d --include=*.py | grep -iE "url|file|parquet|bulk" | head -60
+      - run: python tools/probe2.py ${{ matrix.part }} 2>&1 | grep -v '^\s*$'
