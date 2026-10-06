@@ -11,14 +11,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        part: [bdns, infoaod, iati, crs]
+        part: [crs2, infoaod2]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: |
           mkdir -p probe-out
-          python tools/probe3.py ${{ matrix.part }} > probe-out/${{ matrix.part }}.txt 2>&1 || true
+          python tools/probe4.py ${{ matrix.part }} > probe-out/${{ matrix.part }}.txt 2>&1 || true
           tail -5 probe-out/${{ matrix.part }}.txt
       - run: |
           git config user.name "probe-bot"; git config user.email "probe@users.noreply.github.com"
