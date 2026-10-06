@@ -1,14 +1,20 @@
 {
+ "bdns": {
+  "altas_ultima": 26197,
+  "en_fuente": 26197,
+  "fuera_de_consulta": 0,
+  "ultima_comprobacion": "2026-10-06T23:24:19Z"
+ },
  "crs": {
   "anios": {
    "2023": {
-    "comprobado": "2026-10-06T22:53:50Z",
+    "comprobado": "2026-10-06T22:55:06Z",
     "estado": "ok",
     "registros": 8096,
     "usd_desembolsado": 1600477837.0
    },
    "2024": {
-    "comprobado": "2026-10-06T22:54:11Z",
+    "comprobado": "2026-10-06T22:55:37Z",
     "estado": "ok",
     "registros": 8116,
     "usd_desembolsado": 1827563597.0
@@ -18,7 +24,7 @@
    1995,
    2024
   ],
-  "ultima_comprobacion": "2026-10-06T22:54:11Z"
+  "ultima_comprobacion": "2026-10-06T22:55:37Z"
  },
  "iati": {
   "actividades": 924,
@@ -30,6 +36,6 @@
   "monedas": {
    "EUR": 2208
   },
-  "ultima_comprobacion": "2026-10-06T22:53:47Z"
+  "ultima_comprobacion": "2026-10-06T22:54:50Z"
  }
 }
