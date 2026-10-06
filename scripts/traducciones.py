@@ -203,14 +203,34 @@ AGENCIAS = {
 }
 
 
+AGENCIAS.update({
+    "Development Promotion Fund": (AGE, "Fondo para la Promoción del Desarrollo (FONPRODE)"),
+    "Fund for the Promotion of Development": (AGE, "Fondo para la Promoción del Desarrollo (FONPRODE)"),
+    "Compañía Española de Financiación del Desarrollo": (AGE, "Compañía Española de Financiación del Desarrollo (COFIDES)"),
+    "Ministry of Science and Technology": (AGE, "Ministerio de Ciencia y Tecnología"),
+})
+_PREFIJOS = (
+    (CCAA, ("comunidad", "ciudad autónoma", "ciudad autonoma", "generalitat", "junta de", "xunta", "gobierno de",
+            "principado", "región de", "region de", "illes balears", "govern", "autonomous")),
+    (EELL, ("ayuntamiento", "diputación", "diputacion", "cabildo", "consell", "mancomunidad", "fondo de cooperación",
+            "fons", "federación", "municipal", "local", "ajuntament", "concello", "udal")),
+    (UNIV, ("universidad", "universitat", "universidade", "university", "unibertsitate")),
+    (AGE, ("ministry", "ministerio", "spanish", "state secretariat", "secretaría", "secretariat", "agencia",
+           "instituto", "fundación internacional y para iberoamérica", "compañía española", "fondo para", "fonprode")),
+)
+
+
 def agencia(nombre):
     """Devuelve (nivel_administración, nombre_es) para un organismo informante del CRS."""
     if not nombre:
         return (OTROS, "No informado")
+    nombre = nombre.strip()
     if nombre in AGENCIAS:
         return AGENCIAS[nombre]
-    if nombre.lower().startswith(("ministry", "spanish", "state secretariat", "secretariat")):
-        return (AGE, nombre)
+    low = nombre.lower()
+    for nivel, prefijos in _PREFIJOS:
+        if low.startswith(prefijos):
+            return (nivel, nombre)
     return (OTROS, nombre)
 
 

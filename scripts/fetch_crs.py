@@ -103,11 +103,12 @@ def procesar(texto, anio, usd_por_eur):
         pn = pn or T.agrupacion_es(rec_label) or rec_label
         canal_nombre = row.get("CHANNELDELIVERY_NAME") or ""
         usd_d, usd_c = round(g.get("D", 0.0), 2), round(g.get("C", 0.0), 2)
-        h = hashlib.sha1("|".join(clave).encode()).hexdigest()[:12]
+        h = hashlib.sha1("|".join(clave).encode()).hexdigest()[:10]
         titulo = (row.get("PROJECT_TITLE") or row.get("SHORT_DESCRIPTION") or "").strip()
         recs.append({
-            "id": f"crs-{anio}-{h}",
-            "ref": row.get("OECD_ID") or row.get("DONOR_PROJECT_ID") or "",
+            "id": h,
+            "ref": " · ".join(x for x in (f"CRS {row.get('OECD_ID')}" if row.get("OECD_ID") else "",
+                                          f"proyecto {row.get('DONOR_PROJECT_ID')}" if row.get("DONOR_PROJECT_ID") else "") if x),
             "f": None,
             "a": anio,
             "t": titulo or "(sin título en la fuente)",
@@ -127,9 +128,9 @@ def procesar(texto, anio, usd_por_eur):
             "usd2": usd_c,
             "imp": round(usd_d / rate, 2) if rate else None,
             "imp2": round(usd_c / rate, 2) if rate else None,
-            "url": "md:" + "+".join(sorted(set(m for m in g["md"] if m))),
+            "url": "+".join(sorted(set(m for m in g["md"] if m))),
             "crit": "Donante: España (CRS)",
-            "nota": f"Proyecto del donante: {row.get('DONOR_PROJECT_ID')}" if row.get("DONOR_PROJECT_ID") else None,
+            "nota": None,
         })
     return recs, nuevos_agencia
 

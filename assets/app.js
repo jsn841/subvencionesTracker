@@ -499,8 +499,8 @@
   function enlaceOriginal(i) {
     const S = store, C = S.cols;
     const url = C.url[i];
-    if (state.layer === "aod" && url && url.startsWith("md:")) {
-      const ids = url.slice(3);
+    if (state.layer === "aod" && url) {
+      const ids = url;
       const api = `https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_CRS@DF_CRS,/ESP.........${ids}.?startPeriod=${C.a[i]}&endPeriod=${C.a[i]}&format=csvfilewithlabels`;
       return [{ href: api, text: "Registro en la API oficial de la OCDE (descarga CSV)" },
         { href: "https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_CRS%40DF_CRS&df[ag]=OECD.DCD.FSD", text: "Conjunto de datos CRS en el OCDE Data Explorer" }];
