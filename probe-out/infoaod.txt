@@ -1,0 +1,83 @@
+depth=0 C = ES, L = MADRID, O = MINISTERIO DE ASUNTOS EXTERIORES UNION EUROPEA Y COOPERACION, serialNumber = S2812001B, organizationIdentifier = VATES-S2812001B, CN = *.maec.es
+verify error:num=20:unable to get local issuer certificate
+verify return:1
+depth=0 C = ES, L = MADRID, O = MINISTERIO DE ASUNTOS EXTERIORES UNION EUROPEA Y COOPERACION, serialNumber = S2812001B, organizationIdentifier = VATES-S2812001B, CN = *.maec.es
+verify error:num=21:unable to verify the first certificate
+verify return:1
+depth=0 C = ES, L = MADRID, O = MINISTERIO DE ASUNTOS EXTERIORES UNION EUROPEA Y COOPERACION, serialNumber = S2812001B, organizationIdentifier = VATES-S2812001B, CN = *.maec.es
+verify return:1
+CONNECTED(00000003)
+---
+Certificate chain
+ 0 s:C = ES, L = MADRID, O = MINISTERIO DE ASUNTOS EXTERIORES UNION EUROPEA Y COOPERACION, serialNumber = S2812001B, organizationIdentifier = VATES-S2812001B, CN = *.maec.es
+   i:C = ES, O = FNMT-RCM, OU = AC Componentes Inform\C3\A1ticos
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Jul 17 07:58:19 2026 GMT; NotAfter: Feb  1 07:58:18 2027 GMT
+-----BEGIN CERTIFICATE-----
+MIIHXjCCBkagAwIBAgIQOiZ6s/9Eh6lqWeCbAYXFbzANBgkqhkiG9w0BAQsFADBH
+MQswCQYDVQQGEwJFUzERMA8GA1UECgwIRk5NVC1SQ00xJTAjBgNVBAsMHEFDIENv
+bXBvbmVudGVzIEluZm9ybcOhdGljb3MwHhcNMjYwNzE3MDc1ODE5WhcNMjcwMjAx
+MDc1ODE4WjCBpzELMAkGA1UEBhMCRVMxDzANBgNVBAcMBk1BRFJJRDFFMEMGA1UE
+Cgw8TUlOSVNURVJJTyBERSBBU1VOVE9TIEVYVEVSSU9SRVMgVU5JT04gRVVST1BF
+QSBZIENPT1BFUkFDSU9OMRIwEAYDVQQFEwlTMjgxMjAwMUIxGDAWBgNVBGEMD1ZB
+VEVTLVMyODEyMDAxQjESMBAGA1UEAwwJKi5tYWVjLmVzMIIBIjANBgkqhkiG9w0B
+AQEFAAOCAQ8AMIIBCgKCAQEAua3Cr6M6qLBvs3rFVgWa9vjqs530Xh2lzXM91bON
+8RuJ0GIXjI1CwFclUqWP9PIjGo59wVjDzOSk8PkYlnzXe4VL9NFJJK2pbnJEfEPH
+TQWcl/ZPWz8WN8JlSTpwoAzCJH3AiEKSNMW4KXsaXqoJm5i/xEjIQQjQGdZ+syvY
+9GAAzdJLjUpAVWOottcFX2d7fRhhTbCiQnT/DKzHEmpNeNqfTypJ9Ovd4DCpIh/l
+oXP2viGAlp/jhyj7t8fJBLgHkB1DZVQukBZMRK86nCVpToVTZIOwko6tN3Oufs6B
+vaqBd13Cxj+t1PE3YzHPXua8wk9bPYTdMsYp+exY/RJY8QIDAQABo4ID4zCCA98w
+DAYDVR0TAQH/BAIwADCBgQYIKwYBBQUHAQEEdTBzMDsGCCsGAQUFBzABhi9odHRw
+Oi8vb2NzcGNvbXAuY2VydC5mbm10LmVzL29jc3AvT2NzcFJlc3BvbmRlcjA0Bggr
+BgEFBQcwAoYoaHR0cDovL3d3dy5jZXJ0LmZubXQuZXMvY2VydHMvQUNDT01QLmNy
+dDBYBgNVHSAEUTBPMAgGBmeBDAECAjA5BgorBgEEAaxmAwkRMCswKQYIKwYBBQUH
+AgEWHWh0dHA6Ly93d3cuY2VydC5mbm10LmVzL2RwY3MvMAgGBgQAj3oBBzAdBgNV
+HREEFjAUggkqLm1hZWMuZXOCB21hZWMuZXMwHQYDVR0lBBYwFAYIKwYBBQUHAwEG
+CCsGAQUFBwMCMA4GA1UdDwEB/wQEAwIFoDAdBgNVHQ4EFgQUdTubupuej3OhpzQt
+B04ae/8FO0YwgaYGCCsGAQUFBwEDBIGZMIGWMAsGBgQAjkYBAwIBDzATBgYEAI5G
+AQYwCQYHBACORgEGAzByBgYEAI5GAQUwaDAyFixodHRwczovL3d3dy5jZXJ0LmZu
+bXQuZXMvcGRzL1BEU19DT01QX2VzLnBkZhMCZXMwMhYsaHR0cHM6Ly93d3cuY2Vy
+dC5mbm10LmVzL3Bkcy9QRFNfQ09NUF9lbi5wZGYTAmVuMB8GA1UdIwQYMBaAFBn4
+WC8U1qbMmwSYCA1M16sAp4NlMDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly93d3cu
+Y2VydC5mbm10LmVzL2NybHNjb21wL0NSTDMuY3JsMIIBfAYKKwYBBAHWeQIEAgSC
+AWwEggFoAWYAdQBMY9yY5Zwdq4j2Hoo93q6Pq0SjN3tfm5TD+6Gc/MG+JgAAAZ9v
+FWDXAAAEAwBGMEQCIF2FfcZ1LTgxyYbZ+FT1Wrd0cnFIp7WuxFNzISbBjfX4AiBy
+iMmpqZugfLN1alpTd5VazgUf9rjU0vx4kUyfQoyK1wB1AGBMmq96f3dfAdQG/JIN
+yJnrCxx9+MlSG/r6F3c7l4vJAAABn28VYh8AAAQDAEYwRAIgOv7MeBSZ6u6uKiSY
+i6b3mgin4BHUlo4ufKRtPLBVYcUCIDoM1qY9bkY+6XU49edAWe7iil/RMVYQSKe0
+gYvQAdd0AHYAHJ9oLOn68EVpUPgbloqH3dsyENhM5siy44JSSsTPWZ8AAAGfbxVk
+AwAABAMARzBFAiEA8C+IWbN+yNVUOpZg7EF0xfj7m4QRqdwZt6xtRl+8siICICqF
+amsai6hjlJGHkXROtWi4qnAAfN5/L28zgTWqEiy2MA0GCSqGSIb3DQEBCwUAA4IB
+AQByQ9tiskwzD1vjk7aIkQ0vWnfSpfgFlTen1UxUcqYoWi/aKhLZ2CiGxd/kzM6K
+2z/4cMCJxa7Jef9du0pUXZurlJNLq6+fi9lVwiuUf/IkeDTKnUglUGOTubpYyGJB
+qMWcR936INOG8DP9vdjr4hCNwgmG+OCUwH8ZG+3zMUSijOiQ2lke24dupoe5GNIM
+ioOOXT/9otxPQZRgkQ04K8WYpHarhYyWGtiFshlfkbuK7Q+RZCGV2VbOuNTv7as0
+8FVxUHJInZ9nxjSu1cMTSC9JvXLDX5xTDVfeBm70hFjvt/qEpbFXols4ZUbzJFWw
+vqI45cShiIwsTW+9Vc7pYLVW
+-----END CERTIFICATE-----
+---
+Server certificate
+subject=C = ES, L = MADRID, O = MINISTERIO DE ASUNTOS EXTERIORES UNION EUROPEA Y COOPERACION, serialNumber = S2812001B, organizationIdentifier = VATES-S2812001B, CN = *.maec.es
+
+AIA         Issuer: C = ES, O = FNMT-RCM, OU = AC Componentes Inform\C3\A1ticos
+        Validity
+            Not Before: Jul 17 07:58:19 2026 GMT
+--
+            Authority Information Access: 
+                OCSP - URI:http://ocspcomp.cert.fnmt.es/ocsp/OcspResponder
+                CA Issuers - URI:http://www.cert.fnmt.es/certs/ACCOMP.crt
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.2
+
+PAGE https://infoaod.maec.es/ 8200  Info@OD - M&#243;dulo de An&#225;lisis e Informes SISTEMA DE INFORMACI&#211;N DE LA AYUDA OFICIAL AL DESARROLLO Info@OD - M&#243;dulo de An&#225;lisis e Informes SISTEMA DE INFORMACI&#211;N DE LA AYUDA OFICIAL AL DESARROLLO INICIO AN&#193;LISIS PUBLICACIONES METODOLOGÍA EscaneaODS.C~ AYUDA INFOAOD 2007 - 2023 Bienvenido/a al Sistema de Informaci&#243;n de la Ayuda Oficial al Desarrollo Info@OD Modulo de An&#225;lisis e Informes Esta aplicaci&#243;n permite consultar y realizar informes de los flujos de Ayuda Oficial al Desarrollo Espa&#241;ola reportados y validados por los diferentes agentes que realizan cooperaci&#243;n en Espa&#241;a (Administraci&#243;n General del Estado, Comunidades Aut&#243;nomas, Corporaciones Locales y Universidades) Nuestro objetivo: Fomentar la transparencia y la rendici&#243;n de cuentas a la ciudadan&#237;a Acceder a la informaci&#243;n estadistica Secretaría de Estado de Cooperación Internacional y para Iberoamérica y Caribe &copy; Ministerio de Asuntos Exteriores, Unión Europea y Cooperación 
+  LINK /Analisis
+  LINK /Content/Site.css
+  LINK /DXR.axd?r=101_274,1_28,1_31,101_277,1_23,101_111,1_10,101_114,101_118,101_121,1_11,101_202,7_2,101_205,7_1,7_0,1_3,101_72,101_67,101_70,0_1631,0_1633,0_1554,0_1556,0_1558,0_1560-wHjGp
+  LINK /Escaneo
+  LINK /Metodologia
+PAGE https://infoaod.maec.es/descargas/DescargasAyuda.aspx 7365  Info@OD - M&#243;dulo de An&#225;lisis e Informes SISTEMA DE INFORMACI&#211;N DE LA AYUDA OFICIAL AL DESARROLLO Info@OD - M&#243;dulo de An&#225;lisis e Informes SISTEMA DE INFORMACI&#211;N DE LA AYUDA OFICIAL AL DESARROLLO INICIO AN&#193;LISIS PUBLICACIONES METODOLOGÍA EscaneaODS.C~ AYUDA INFOAOD 2007 - 2023 Ha ocurrido un error al acceder al Sistema de Informaci&#243;n de la Ayuda Oficial al Desarrollo Info@OD Disculpe las molestias. Int&#233;ntelo m&#225;s tarde. Si desea acceder a m&#225;s informaci&#243;n de la ayuda oficial al desarrollo espa&#241;ola pulse aqu&#237; Secretaría de Estado de Cooperación Internacional y para Iberoamérica y Caribe &copy; Ministerio de Asuntos Exteriores, Unión Europea y Cooperación 
+  LINK /Content/Site.css
+  LINK /DXR.axd?r=101_274,1_28,1_31,101_277,1_23,101_111,1_10,101_114,101_118,101_121,1_11,101_202,7_2,101_205,7_1,7_0,1_3,101_72,101_67,101_70,0_1631,0_1633,0_1554,0_1556,0_1558,0_1560-wHjGp
+  LINK /Escaneo
+  LINK /Metodologia
+  LINK http://www.exteriores.gob.es/Portal/es/SalaDePrensa/Multimedia/Publicaciones/Paginas/Cooperacion/Seguimiento.aspx
