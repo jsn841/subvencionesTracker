@@ -1,0 +1,35 @@
+{
+ "crs": {
+  "anios": {
+   "2023": {
+    "comprobado": "2026-10-06T21:54:32Z",
+    "estado": "ok",
+    "registros": 8096,
+    "usd_desembolsado": 1600477837.0
+   },
+   "2024": {
+    "comprobado": "2026-10-06T21:55:00Z",
+    "estado": "ok",
+    "registros": 8116,
+    "usd_desembolsado": 1827563597.0
+   }
+  },
+  "rango_api": [
+   1995,
+   2024
+  ],
+  "ultima_comprobacion": "2026-10-06T21:55:00Z"
+ },
+ "iati": {
+  "actividades": 924,
+  "anios": [
+   2024,
+   2025,
+   2026
+  ],
+  "monedas": {
+   "EUR": 2208
+  },
+  "ultima_comprobacion": "2026-10-06T21:54:22Z"
+ }
+}
