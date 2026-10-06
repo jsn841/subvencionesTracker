@@ -1,0 +1,25 @@
+OK https://data-api.ecb.europa.eu/service/data/EXR/A.USD.EUR.SP00.A?format=csvdata 5799
+KEY,FREQ,CURRENCY,CURRENCY_DENOM,EXR_TYPE,EXR_SUFFIX,TIME_PERIOD,OBS_VALUE,OBS_STATUS,OBS_CONF,OBS_PRE_BREAK,OBS_COM,TIME_FORMAT,BREAKS,COLLECTION,COMPILING_ORG,DISS_ORG,DOM_SER_IDS,PUBL_ECB,PUBL_MU,PUBL_PUBLIC,UNIT_INDEX_BASE,COMPILATION,COVERAGE,DECIMALS,NAT_TITLE,SOURCE_AGENCY,SOURCE_PUB,TITLE,TITLE_COMPL,UNIT,UNIT_MULT
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,1999,1.0657764478764,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2000,0.9236125490196,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2001,0.8956295275591,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2002,0.9455737254902,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2003,1.1311603921569,A,F
+...
+USD.EUR.SP00.A,A,USD,EUR,SP00,A,2023,1.081268627451,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2024,1.08238046875,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+EXR.A.USD.EUR.SP00.A,A,USD,EUR,SP00,A,2025,1.1299831372549,A,F,,,P1Y,,A,,,,,,,,,,4,,4F0,,US dollar/Euro ECB reference exchange rate,"ECB reference exchange rate, US dollar/Euro, 2.15 pm (C.E.T.)",USD,0
+
+ERR https://sdmx.oecd.org/public/rest/dataflow/all/DSD_EXR@DF_EXR/latest HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_EXR@DF_EXR,/ESP.A.....?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_EXR@DF_EXR,/ESP......?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_EXR@DF_EXR,1.0/ESP.A.EXC_A.......?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_EXR@DF_EXR,/ESP?format=csvfilewithlabels HTTP Error 404: Not Found
+CRSERR 2022 &format=csvfile HTTP Error 404: Not Found b'NoRecordsFound'
+CRSERR 2022 &format=csvfile&dimensionAtObservation=AllDimensions HTTP Error 404: Not Found b'NoRecordsFound'
+CRS 2023 &format=csvfile 32773253 22
+CRS 2024 &format=csvfile 32638806 24
+CRS 1995 &format=csvfile 14673 1
+SPLITERR ESP.......V.... HTTP Error 404: Not Found
+SPLITERR ESP......D.V... HTTP Error 404: Not Found
+SPLITERR ESP......D.V.DD.. HTTP Error 404: Not Found
