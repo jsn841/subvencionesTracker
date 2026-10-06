@@ -150,6 +150,8 @@ def main():
         for k, _ in enumerate(ex.map(lambda n: convocatoria_info(cache, n), pendientes)):
             if k and k % 500 == 0:
                 log(f"  {k} convocatorias consultadas")
+                with open(cache_path, "w", encoding="utf-8") as f:
+                    json.dump(cache, f, ensure_ascii=False, separators=(",", ":"))
 
     # 3) Convierte al formato común
     nuevos = {}
