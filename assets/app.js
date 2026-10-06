@@ -354,7 +354,7 @@
     ch.setOption({
       animation: false,
       textStyle: baseTextStyle(),
-      grid: { left: 8, right: 76, top: 6, bottom: 6, containLabel: true },
+      grid: { left: 18, right: 76, top: 6, bottom: 6, containLabel: true },
       tooltip: { ...tooltipBase(), trigger: "item", formatter: (p) => `<strong>${esc(p.data.full)}</strong><br>${eur(p.value)}<br>${fmtInt.format(p.data.n)} registros${extraTooltip ? extraTooltip(p.data) : ""}` },
       xAxis: { type: "value", axisLabel: { show: false }, splitLine: { show: false } },
       yAxis: { type: "category", data: data.map((d) => cut(d.name, $(id).clientWidth < 480 ? 22 : 38)), axisTick: { show: false }, axisLine: { lineStyle: { color: css("--border") } }, axisLabel: { color: css("--text-2") } },
