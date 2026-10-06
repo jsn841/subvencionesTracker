@@ -98,9 +98,7 @@ def separar_beneficiario(texto):
     return ident, nombre.strip(), persona
 
 
-def convocatoria_info(cache, num):
-    if num in cache:
-        return cache[num]
+def convocatoria_info(num):
     try:
         j = api_json("convocatorias", {"vpd": "GE", "numConv": num})
         info = {
@@ -112,9 +110,8 @@ def convocatoria_info(cache, num):
     except Exception as e:  # noqa: BLE001
         log(f"  convocatoria {num}: {e}")
         info = None
-    cache[num] = info
     time.sleep(0.5)
-    return info
+    return num, info
 
 
 def main():
@@ -147,7 +144,9 @@ def main():
     pendientes = sorted({str(c.get("numeroConvocatoria")) for c, _, _ in encontrados.values() if c.get("numeroConvocatoria")} - set(cache))
     log(f"Convocatorias nuevas a consultar: {len(pendientes)}")
     with ThreadPoolExecutor(max_workers=4) as ex:
-        for k, _ in enumerate(ex.map(lambda n: convocatoria_info(cache, n), pendientes)):
+        for k, (num, info) in enumerate(ex.map(convocatoria_info, pendientes)):
+            if info is not None:  # si falló, se reintentará en la próxima ejecución
+                cache[num] = info
             if k and k % 500 == 0:
                 log(f"  {k} convocatorias consultadas")
                 with open(cache_path, "w", encoding="utf-8") as f:
