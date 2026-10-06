@@ -143,8 +143,9 @@ def main():
         log(f"Región {cod} {nombre}: {len(lista)} concesiones")
         for c in lista:
             e = encontrados.setdefault(c["id"], [c, [], None])
-            e[1].append(f"Región de impacto: {nombre.title() if cod not in ('XXX', 'XXXX') else nombre}")
             ubic = pais_de_region(cod, nombre)
+            etiqueta = {"XXX": "Regiones o países no europeos", "XXXX": "Todo el mundo"}.get(cod, ubic[1])
+            e[1].append(f"Región de impacto: {etiqueta}")
             if e[2] is None or e[2][0] in ("XNE", "XWW"):
                 e[2] = ubic
         time.sleep(2)
