@@ -1,0 +1,58 @@
+HTTP/2 403 
+date: Tue, 06 Oct 2026 21:32:54 GMT
+content-type: text/html; charset=UTF-8
+content-length: 5615
+accept-ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+cf-mitigated: challenge
+content-security-policy: default-src 'none'; script-src 'nonce-1x0bYRZfah08qpJyHjAMBK' 'unsafe-eval' https://challenges.cloudflare.com; script-src-attr 'none'; style-src 'unsafe-inline'; img-src 'self' https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com blob:; child-src 'self' https://challenges.cloudflare.com blob:; worker-src blob:; form-action http: https:; base-uri 'self'
+server: cloudflare
+critical-ch: Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA
+cross-origin-embedder-policy: require-corp
+cross-origin-opener-policy: same-origin
+cross-origin-resource-policy: same-origin
+origin-agent-cluster: ?1
+permissions-policy: accelerometer=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),magnetometer=(),microphone=(),pay
+SIZE 5615
+HEAD b'<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scal'
+PQERR Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+INFO: Fetching data from API: https://sdmx.oecd.org/public/rest/dataflow/OECD.DCD.FSD/DSD_CRS@DF_CRS/latest
+INFO: Discovered latest version for 'DSD_CRS@DF_CRS': 1.6
+INFO: Fetching data from API: https://sdmx.oecd.org/public/rest/dataflow/OECD.DCD.FSD/DSD_CRS@DF_CRS/1.6
+INFO: The file will be returned as a DataFrame.
+INFO: Fetching bbd6e3fda9c80bedd49957b9ac994297c94320e9 (refresh=False)
+INFO: Streaming download from https://webfs-dcd.oecd.org/files/dotStat/DSD_CRS/CRS.parquet (attempt 1/4)
+Traceback (most recent call last):
+  File "/home/runner/work/subvencionesTracker/subvencionesTracker/tools/probe3.py", line 45, in <module>
+    f = pq.ParquetFile("/tmp/crs.parquet")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/pyarrow/parquet/core.py", line 331, in __init__
+    self.reader.open(
+  File "pyarrow/_parquet.pyx", line 1676, in pyarrow._parquet.ParquetReader.open
+  File "pyarrow/error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/subvencionesTracker/subvencionesTracker/tools/probe3.py", line 49, in <module>
+    df = oda_reader.bulk_download_crs(); p("ODAREADER", df.shape)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/crs.py", line 145, in bulk_download_crs
+    return bulk_download_parquet(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/download/download_tools.py", line 1375, in bulk_download_parquet
+    manager, payload_path, url_key = _fetch(url, version)
+                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/download/download_tools.py", line 1366, in _fetch
+    fetched_path = fetch_manager.ensure(entry)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/_cache/manager.py", line 133, in ensure
+    self._fetch_and_cache(entry, path)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/_cache/manager.py", line 228, in _fetch_and_cache
+    entry.fetcher(tmp_path)
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/download/download_tools.py", line 1362, in <lambda>
+    fetcher=lambda p: _stream_to_file(target_url, headers, p),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/oda_reader/download/download_tools.py", line 959, in _stream_to_file
+    raise response_error
+oda_reader.exceptions.BulkDownloadChallengeError: Cloudflare presented an interactive challenge for https://webfs-dcd.oecd.org/files/dotStat/DSD_CRS/CRS.parquet. Browser execution is required to continue. Provide Cloudflare Ray ID a467c8176d4733b0-LAX to OECD support.
