@@ -1,0 +1,80 @@
+ACTS 834 BYTES 4879599
+TXYEARS [('2024', 1208), ('2025', 966), ('2026', 30)]
+TXTYPES Counter({'2': 1102, '3': 1102})
+TAGS [('budget', 6140), ('participating-org', 2502), ('activity-date', 2502), ('transaction', 2204), ('sector', 1544), ('description', 1479), ('location', 969), ('iati-identifier', 834), ('reporting-org', 834), ('title', 834), ('activity-status', 834), ('contact-info', 834), ('activity-scope', 834), ('default-flow-type', 834), ('default-finance-type', 834), ('default-tied-status', 834), ('capital-spend', 834), ('conditions', 834), ('default-aid-type', 829), ('recipient-country', 822), ('recipient-region', 147)]
+CTRY [('CO', 48), ('BO', 47), ('PE', 45), ('GT', 40), ('PY', 39), ('PS', 38), ('EC', 35), ('HN', 29), ('ET', 29), ('SV', 25), ('ES', 25), ('MA', 25), ('DO', 21), ('EH', 21), ('ML', 20), ('MX', 19), ('PA', 19), ('NE', 19), ('EG', 19), ('NI', 18)]
+ONE <iati-activity xml:lang="es" default-currency="EUR" last-updated-datetime="2026-06-30T07:23:00Z">
+    <iati-identifier>XM-DAC-50-21-Z03-24-01-21300</iati-identifier>
+    <reporting-org ref="XM-DAC-50-21" type="10">
+      <narrative>AECID Agencia Española de Cooperación Internacional para el Desarrollo</narrative>
+    </reporting-org>
+    <title>
+      <narrative>Soluciones basadas en la naturaleza para resiliencia y empleo en el Mediterráneo</narrative>
+    </title>
+    <description type="1">
+      <narrative>El Proyecto Tamkeen (del árabe "emprendimiento" o "empoderamiento") tiene como objetivo global fortalecer las capacidades de entidades locales para mejorar la planificación y diseño de proyectos que contribuyan a la resiliencia climática, la preservación de la biodiversidad y la promoción de empleo sostenible, con especial atención a jóvenes y mujere,  mediante formación, mentoría y proyectos piloto.
+Título: Fortalecimiento de capacidades de sociedad civil y actores locales en soluciones basadas en la naturaleza para la resiliencia y el empleo sostenible</narrative>
+    </description>
+    <description type="2">
+      <narrative>Fortalecer capacidades locales para promover resiliencia climática y empleo sostenible mediante soluciones basadas en la naturaleza.</narrative>
+    </description>
+    <participating-org ref="XM-DAC-50-21" role="1" type="10">
+      <narrative>AECID Agencia Española de Cooperación Internacional para el Desarrollo</narrative>
+    </participating-org>
+    <participating-org ref="ES-NIF-241022100109" role="2" type="30">
+      <narrative>UICN - Union Internationale Pour la Conservation de la Nature Et de Ses Ressources</narrative>
+    </participating-org>
+    <participating-org ref="ES-NIF-241022100109" role="4" type="30">
+      <narrative>UICN - Union Internationale Pour la Conservation de la Nature Et de Ses Ressources</narrative>
+    </participating-org>
+    <activity-status code="2" />
+    <activity-date iso-date="2025-01-01" type="1" />
+    <activity-date iso-date="2025-01-01" type="2" />
+    <activity-date iso-date="2026-12-31" type="3" />
+    <contact-info type="1">
+      <organisation>
+        <narrative>AECID Spanish Agency for International Development Cooperation</narrative>
+      </organisation>
+      <telephone>+34900203054</telephone>
+      <email>centro.informacion@aecid.es</email>
+      <website>https://www.aecid.es</website>
+      <mailing-address>
+        <narrative>Av. Reyes Católicos 4, 28040 Madrid (Spain)</narrative>
+      </mailing-address>
+    </contact-info>
+    <activity-scope code="2" />
+    <recipient-region code="298" percentage="100.0" />
+    <location ref="Y09">
+      <location-reach code="1" />
+      <location-id vocabulary="A4" code="298" />
+    </location>
+    <sector code="41081" vocabulary="1" percentage="100.0" />
+    <default-flow-type code="10" />
+    <default-finance-type code="110" />
+    <default-aid-type code="C01" />
+    <default-tied-status code="5" />
+    <capital-spend percentage="100" />
+    <transaction>
+      <transaction-type code="2" />
+      <transaction-date iso-date="2024-12-18" />
+      <value currency="EUR" value-date="2024-12-18">350000.0</value>
+      <receiver-org ref="ES-NIF-241022100109" type="30">
+        <narrative>UICN - Union Internationale Pour la Conservation de la Nature Et de Ses Ressources</narrative>
+      </receiver-org>
+    </transaction>
+    <transaction>
+      <transaction-type code="3" />
+      <transaction-date iso-date="2024-12-18" />
+      <value currency="EUR" value-date="2024-12-18">350000.0</value>
+      <receiver-org ref="ES-NIF-241022100109" type="30">
+        <narrative>UICN - Union Internationale Pour la Conservation de la Nature Et de Ses Ressources</narrative>
+      </receiver-org>
+    </transaction>
+    <conditions attached="0">
+      <condition type="2">
+        <narrative>Esta intervención no está sujeta a condiciones específicas, salvo los requisitos habituales en materia de presentación de informes, resultados y rendición de cuentas.</narrative>
+        <narrative xml:lang="en">No specific conditions apply to this activity beyond standard reporting and accountability requirements.</narrative>
+      </condition>
+    </conditions>
+  </iati-activity>
+  
