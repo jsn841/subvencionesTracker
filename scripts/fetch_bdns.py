@@ -114,13 +114,27 @@ def convocatoria_info(num):
     return num, info
 
 
+def guardar_json(path, obj):
+    """Escritura atómica: nunca deja un archivo a medias."""
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, separators=(",", ":"))
+    os.replace(tmp, path)
+
+
 def main():
     hoy = date.today().isoformat()
     state = load_state()
     st = state.setdefault("bdns", {})
     os.makedirs(os.path.join(DATA, "bdns"), exist_ok=True)
     cache_path = os.path.join(DATA, "bdns", "_convocatorias.json")
-    cache = json.load(open(cache_path, encoding="utf-8")) if os.path.exists(cache_path) else {}
+    cache = {}
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path, encoding="utf-8") as f:
+                cache = json.load(f)
+        except ValueError:
+            log("  caché de convocatorias dañada: se reconstruye")
 
     # 1) Descarga según los dos criterios
     encontrados = {}  # id -> (concesion, [criterios], (p, pn, r))
@@ -149,8 +163,7 @@ def main():
                 cache[num] = info
             if k and k % 500 == 0:
                 log(f"  {k} convocatorias consultadas")
-                with open(cache_path, "w", encoding="utf-8") as f:
-                    json.dump(cache, f, ensure_ascii=False, separators=(",", ":"))
+                guardar_json(cache_path, cache)
 
     # 3) Convierte al formato común
     nuevos = {}
@@ -210,8 +223,7 @@ def main():
     for anio, d in por_anio.items():
         if anio:
             write_year("bdns", anio, list(d.values()))
-    with open(cache_path, "w", encoding="utf-8") as f:
-        json.dump(cache, f, ensure_ascii=False, separators=(",", ":"))
+    guardar_json(cache_path, cache)
 
     st.update({"ultima_comprobacion": now_iso(), "en_fuente": len(nuevos), "altas_ultima": altas,
                "fuera_de_consulta": retirados})
