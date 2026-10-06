@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metodología · Ayudas de España al exterior</title>
+<meta name="description" content="De dónde salen los datos, qué periodo cubre cada fuente, cómo se combinan sin contar dos veces y cuáles son sus limitaciones.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%232a78d6' stroke-width='3'/%3E%3Cpath d='M2 16h28M16 2c5 5 5 23 0 28M16 2c-5 5-5 23 0 28' fill='none' stroke='%232a78d6' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-row">
+    <div>
+      <h1>Metodología</h1>
+      <p class="subtitle">De dónde salen los datos, qué periodo cubre cada fuente, cómo se combinan y qué limitaciones tienen.</p>
+    </div>
+    <nav class="top-nav" aria-label="Secciones">
+      <a href="index.html">Datos</a>
+      <a href="metodologia.html" aria-current="page">Metodología</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article class="doc">
+
+<h2>Qué muestra esta web</h2>
+<p>Recoge las ayudas y subvenciones que las administraciones públicas españolas (el Estado y sus ministerios, y también comunidades autónomas, entidades locales y universidades, que se pueden separar con el filtro «Administración») conceden a entidades, gobiernos o proyectos en otros países.</p>
+<p class="callout">La web reproduce los datos oficiales tal como los publica cada fuente. No los valora, no los corrige y no añade estimaciones. Solo hace tres transformaciones, explicadas abajo: traduce al español las etiquetas que la OCDE publica en inglés, convierte los dólares de la OCDE a euros y oculta el nombre de las personas físicas.</p>
+
+<h2>Las fuentes</h2>
+<table>
+  <thead><tr><th>Fuente</th><th>Qué es</th><th>Periodo en esta web</th><th>Se consulta</th><th>Unidad</th></tr></thead>
+  <tbody>
+    <tr><td><strong>CRS de la OCDE</strong><br>(Creditor Reporting System)</td><td>Base estadística internacional de la ayuda al desarrollo. España comunica cada año, proyecto a proyecto, la Ayuda Oficial al Desarrollo (AOD) de todas sus administraciones.</td><td>1995 – último año publicado <span data-cov="aod"></span></td><td>Cada lunes (la OCDE publica una vez al año, hacia diciembre)</td><td>Dólares (USD) corrientes; la web añade la conversión a euros</td></tr>
+    <tr><td><strong>BDNS</strong><br>(Base de Datos Nacional de Subvenciones, infosubvenciones.es)</td><td>Registro legal de las subvenciones y ayudas públicas concedidas en España, gestionado por la Intervención General de la Administración del Estado (IGAE).</td><td>Desde 2022 <span data-cov="bdns"></span>; crece cada día</td><td>Cada día</td><td>Euros</td></tr>
+    <tr><td><strong>IATI de AECID</strong></td><td>Actividades que la Agencia Española de Cooperación Internacional para el Desarrollo publica en el estándar internacional de transparencia IATI.</td><td><span data-cov="iati"></span></td><td>Cada día</td><td>Euros</td></tr>
+    <tr><td><strong>info@OD</strong><br>(Ministerio de Asuntos Exteriores)</td><td>Sistema español de información de la AOD. Es el origen de los datos que España envía al CRS.</td><td>No se carga (ver más abajo)</td><td>—</td><td>Euros</td></tr>
+  </tbody>
+</table>
+<div id="cobertura"></div>
+
+<h2>Cómo se evita contar dos veces la misma ayuda</h2>
+<p>Las fuentes se solapan: info@OD y el CRS contienen esencialmente los mismos datos (España los recopila en info@OD y los envía a la OCDE); las actividades de AECID en IATI también se comunican al CRS; y una subvención de AECID a una ONG para un proyecto en otro país puede figurar a la vez en la BDNS y en el CRS.</p>
+<p>No existe un identificador común que permita emparejar con seguridad los registros de unas fuentes con los de otras. Por eso la web aplica una regla sencilla y verificable:</p>
+<ul>
+  <li><strong>Cada fuente es una «capa» independiente.</strong> Se elige una capa cada vez y todos los totales, gráficas y descargas se calculan solo con ella. Las cifras de capas distintas <strong>nunca se suman</strong>.</li>
+  <li><strong>Dentro del CRS</strong>, la OCDE publica cada proyecto en varias líneas (compromiso y desembolso, precios corrientes y constantes). La web usa solo los precios corrientes y une compromiso y desembolso del mismo proyecto en un único registro.</li>
+  <li><strong>Dentro de la BDNS</strong>, una concesión que cumple varios criterios de selección (por ejemplo, región «Todo el mundo» y finalidad «cooperación internacional») aparece una sola vez, identificada por su código oficial de concesión.</li>
+  <li><strong>info@OD no se carga</strong>, porque duplicaría el CRS. Además, su herramienta de consulta (años 2007–2023) exige resolver un código de imagen (CAPTCHA), lo que impide la descarga automática, y los ficheros descargables del Ministerio (años 2000–2015) tienen formatos distintos cada año. Sus datos llegan a esta web a través del CRS.</li>
+</ul>
+
+<h2>Fuente 1: CRS de la OCDE</h2>
+<h3>Cómo se descarga</h3>
+<p>Desde la API oficial de la OCDE (<code>sdmx.oecd.org</code>, conjunto <code>DSD_CRS@DF_CRS</code>), pidiendo solo los datos del donante España. Cada registro de la web es un proyecto o actividad de un año.</p>
+<h3>Cobertura</h3>
+<ul>
+  <li>El CRS existe desde 1973, pero la API de la OCDE solo ofrece datos de España proyecto a proyecto desde <strong>1995</strong>. La OCDE considera los compromisos completos a partir de 1995 y los desembolsos a partir de 2002: en los años anteriores faltan proyectos.</li>
+  <li>El año más reciente suele ser el de hace dos años, porque la OCDE publica los datos definitivos con ese retraso.</li>
+  <li>En la fecha de la primera carga la API no devolvía ningún registro de España para <strong>2022</strong>. La web lo muestra como «sin datos en la fuente» (no como cero) y vuelve a comprobarlo cada semana.</li>
+</ul>
+<h3>Importes</h3>
+<ul>
+  <li><strong>Desembolsado</strong>: dinero efectivamente pagado ese año. <strong>Comprometido</strong>: importe que se acordó dar, que puede pagarse en varios años. Se elige uno u otro con el selector junto al total; nunca se suman.</li>
+  <li>La OCDE publica en <strong>dólares corrientes</strong>. Para que las cifras se lean con facilidad, la web las convierte a <strong>euros</strong> con el tipo de cambio medio de cada año del Banco Central Europeo (antes de 1999, el del ECU, que equivale 1:1 al euro). El importe original en dólares aparece en cada ficha y en las descargas. Al usar el tipo medio anual, la cifra en euros puede diferir ligeramente de la que publica España en sus propios informes.</li>
+  <li>Son euros corrientes de cada año, sin ajustar por inflación.</li>
+</ul>
+<h3>Qué incluye y qué no</h3>
+<ul>
+  <li>Incluye la ayuda de <strong>todas las administraciones</strong>: el filtro «Administración» separa la del Estado (ministerios y AECID), la de comunidades autónomas, la de entidades locales y la de universidades. La OCDE no detalla qué comunidad o ayuntamiento concreto da cada ayuda.</li>
+  <li>Incluye partidas que, según las normas de la OCDE, cuentan como AOD aunque el gasto se haga en España: acogida de refugiados y solicitantes de asilo, sensibilización, costes de estudiantes, becas y costes administrativos. Están etiquetadas en el filtro «Tipo de ayuda» para poder separarlas.</li>
+  <li>Incluye donaciones, préstamos, participaciones en capital y alivio de deuda (filtro «Instrumento»). Un préstamo se devuelve; su importe no equivale a una donación.</li>
+  <li>Las <strong>contribuciones generales a organismos multilaterales</strong> (cuotas a la ONU, a la Unión Europea, a bancos de desarrollo…) en su mayoría no figuran proyecto a proyecto en el CRS. Por eso la suma de esta capa es menor que la AOD total de España que publica la OCDE en sus tablas agregadas.</li>
+  <li>El campo «Canal o entidad receptora» es el canal de entrega que informa España (por ejemplo «ONG del país donante», «Gobierno receptor» o el nombre de un organismo internacional). No siempre identifica a la entidad final que recibe el dinero.</li>
+  <li>Los títulos son los oficiales que comunica España, a menudo en inglés. No se traducen.</li>
+</ul>
+
+<h2>Fuente 2: BDNS (infosubvenciones.es)</h2>
+<h3>Cómo se seleccionan las concesiones</h3>
+<p>La BDNS no tiene un campo «país del beneficiario». La web descarga, desde la API pública del Sistema Nacional de Publicidad de Subvenciones, las concesiones que cumplen al menos uno de estos criterios, y guarda en cada registro cuál ha cumplido («Motivo de inclusión»):</p>
+<ol>
+  <li>La convocatoria indica como <strong>región de impacto</strong> un país de la Unión Europea distinto de España, «Regiones o países no europeos» o «Todo el mundo».</li>
+  <li>La convocatoria tiene la <strong>finalidad</strong> «Cooperación internacional para el desarrollo y cultural».</li>
+</ol>
+<p>El país solo se conoce cuando la región de la convocatoria es un país europeo concreto. En los demás casos la web muestra «Fuera de Europa», «Todo el mundo» o «País no especificado en la fuente», sin deducirlo del texto.</p>
+<h3>Cobertura y actualización</h3>
+<ul>
+  <li>La consulta pública de la BDNS solo muestra las concesiones de los <strong>últimos cuatro años</strong> (en la primera carga, desde enero de 2022). Las anteriores ya no se pueden descargar.</li>
+  <li>La web descarga la selección completa cada día. Añade las concesiones nuevas, actualiza las que la fuente haya corregido y <strong>conserva las que dejan de verse</strong> en la consulta pública, con una nota que lo indica. Así el histórico crece con el tiempo.</li>
+  <li>Una concesión se registra a veces semanas después de su fecha, de modo que los últimos días pueden estar incompletos.</li>
+</ul>
+<h3>Importes y datos personales</h3>
+<ul>
+  <li><strong>Importe concedido</strong>: lo que se concede, no necesariamente lo que se paga. <strong>Ayuda equivalente</strong>: valor de la ayuda en términos de subvención (coincide con el importe en las subvenciones; es menor en préstamos o garantías).</li>
+  <li>Cuando el beneficiario es una <strong>persona física</strong> (por ejemplo, becarios), la BDNS oculta parte de su NIF. Esta web, además, no muestra su nombre: aparece como «Persona física (nombre no publicado en esta web)». El importe sí se incluye en los totales.</li>
+  <li>La finalidad «cooperación internacional para el desarrollo y cultural» incluye también algunas actividades culturales. El filtro «Sector o finalidad» y el «Motivo de inclusión» permiten revisarlas.</li>
+</ul>
+
+<h2>Fuente 3: IATI de AECID</h2>
+<ul>
+  <li>Se descargan los ficheros que AECID publica en el registro IATI (<code>iatiregistry.org</code>, editor «aecid»). Hoy cubren sobre todo 2024 y 2025.</li>
+  <li>Cada registro de la web es una actividad en un año: suma los desembolsos y los compromisos de ese año.</li>
+  <li>Es información de una sola agencia (AECID) y de años recientes, publicada antes de que la OCDE publique esos años. Gran parte figurará más adelante en el CRS: por eso tampoco se suma a las otras capas.</li>
+  <li>Cada ficha enlaza a la actividad en d-portal.org, el visor oficial de datos IATI.</li>
+</ul>
+
+<h2>Otras limitaciones a tener en cuenta</h2>
+<ul>
+  <li>Las fuentes se corrigen con el tiempo. Una cifra puede cambiar entre dos visitas si el organismo que la publica la ha revisado.</li>
+  <li>Los nombres de los ministerios cambian con cada legislatura. Se muestran tal como figuran en cada fuente y año, sin unificarlos.</li>
+  <li>Los nombres de países de la OCDE se traducen al español con la norma ISO 3166. Las agrupaciones («África, regional», «Países en desarrollo sin especificar»…) se traducen literalmente.</li>
+  <li>El mapa solo colorea los importes asignados a un país concreto. Lo destinado a varios países o a regiones se indica debajo del mapa.</li>
+</ul>
+
+<h2>Reutilización y licencias de las fuentes</h2>
+<ul>
+  <li>CRS: <a href="https://www.oecd.org/en/about/terms-conditions.html" rel="noopener">condiciones de uso de la OCDE</a>.</li>
+  <li>BDNS: <a href="https://www.infosubvenciones.es/bdnstrans/GE/es/avisolegal" rel="noopener">aviso legal del Sistema Nacional de Publicidad de Subvenciones</a>. La propia fuente advierte de que sus datos son dinámicos y pueden corregirse después de descargarlos.</li>
+  <li>IATI de AECID: licencia indicada por AECID en el registro IATI (ODC-BY).</li>
+  <li>Tipos de cambio: <a href="https://data.ecb.europa.eu/" rel="noopener">Banco Central Europeo</a>.</li>
+  <li>Mapa: <a href="https://github.com/topojson/world-atlas" rel="noopener">world-atlas</a> (Natural Earth, dominio público). Las fronteras son solo orientativas.</li>
+</ul>
+<p>El código de la web y los datos procesados están en su repositorio de GitHub. Cada actualización queda registrada allí con su fecha, de modo que se puede comprobar qué cambió y cuándo.</p>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>Web independiente, gratuita y de código abierto. No pertenece a ninguna administración pública.</p></div>
+</footer>
+<script>
+(async () => {
+  try {
+    const m = await (await fetch("data/manifest.json", { cache: "no-cache" })).json();
+    const fmt = new Intl.NumberFormat("es-ES", { maximumFractionDigits: 0 });
+    for (const [k, c] of Object.entries(m.capas)) {
+      const ys = c.anios.filter((a) => a.registros > 0).map((a) => a.anio);
+      const el = document.querySelector(`[data-cov="${k}"]`);
+      if (el && ys.length) el.textContent = `(datos cargados: ${Math.min(...ys)}–${Math.max(...ys)})`;
+    }
+    const rows = [];
+    for (const [k, c] of Object.entries(m.capas)) {
+      for (const a of c.anios) rows.push(`<tr><td>${c.corto}</td><td>${a.anio}</td><td style="text-align:right">${fmt.format(a.registros)}</td><td style="text-align:right">${fmt.format(a.importe)} €</td><td style="text-align:right">${a.usd ? fmt.format(a.usd) + " $" : "—"}</td></tr>`);
+    }
+    document.getElementById("cobertura").innerHTML = `<h3>Registros cargados por fuente y año</h3>
+      <p>Para cotejar con las fuentes. Importe principal: desembolsado (OCDE, IATI) o concedido (BDNS). Generado el ${new Date(m.generado).toLocaleString("es-ES")}.</p>
+      <table><thead><tr><th>Fuente</th><th>Año</th><th>Registros</th><th>Importe (EUR)</th><th>Importe publicado (USD)</th></tr></thead><tbody>${rows.join("")}</tbody></table>`;
+  } catch (e) { /* sin datos todavía */ }
+})();
+</script>
+</body>
+</html>

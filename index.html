@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayudas de España al exterior</title>
+<meta name="description" content="Datos oficiales de las ayudas y subvenciones que el Gobierno de España y otras administraciones conceden a entidades, gobiernos y proyectos en otros países. Fuentes: OCDE (CRS), BDNS e IATI.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%232a78d6' stroke-width='3'/%3E%3Cpath d='M2 16h28M16 2c5 5 5 23 0 28M16 2c-5 5-5 23 0 28' fill='none' stroke='%232a78d6' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-row">
+    <div>
+      <h1>Ayudas de España al exterior</h1>
+      <p class="subtitle">Ayudas y subvenciones de las administraciones públicas españolas a entidades, gobiernos y proyectos en otros países. Datos oficiales, sin valoraciones.</p>
+    </div>
+    <nav class="top-nav" aria-label="Secciones">
+      <a href="index.html" aria-current="page">Datos</a>
+      <a href="metodologia.html">Metodología</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="layer-picker" aria-labelledby="capa-titulo">
+    <h2 id="capa-titulo" class="section-label">1. Elige la fuente de datos</h2>
+    <div class="layer-tabs" role="tablist" id="layer-tabs"></div>
+    <p class="layer-note" id="layer-note"></p>
+  </section>
+
+  <section class="filters" aria-labelledby="filtros-titulo">
+    <div class="filters-head">
+      <h2 id="filtros-titulo" class="section-label">2. Filtra</h2>
+      <button type="button" class="btn-link" id="reset">Quitar todos los filtros</button>
+    </div>
+    <div class="filter-grid" id="filter-grid">
+      <label class="field field-wide">
+        <span>Texto libre</span>
+        <input type="search" id="f-texto" placeholder="Busca en título, beneficiario, país u organismo">
+      </label>
+      <div class="field" data-ms="pn"><span>País o destino</span></div>
+      <div class="field" data-ms="r"><span>Región</span></div>
+      <div class="field" data-ms="adm"><span>Administración</span></div>
+      <div class="field" data-ms="org"><span>Ministerio u organismo</span></div>
+      <label class="field">
+        <span>Beneficiario</span>
+        <input type="search" id="f-benef" placeholder="Nombre o parte del nombre">
+      </label>
+      <div class="field" data-ms="ins"><span>Instrumento</span></div>
+      <div class="field" data-ms="mod"><span>Tipo de ayuda</span></div>
+      <div class="field" data-ms="sec"><span>Sector o finalidad</span></div>
+      <div class="field field-range">
+        <span>Años</span>
+        <div class="range-row">
+          <select id="f-anio-desde" aria-label="Desde el año"></select>
+          <span aria-hidden="true">–</span>
+          <select id="f-anio-hasta" aria-label="Hasta el año"></select>
+        </div>
+      </div>
+      <div class="field field-range">
+        <span>Importe por registro (€)</span>
+        <div class="range-row">
+          <input type="number" id="f-min" min="0" step="1000" placeholder="Mínimo" inputmode="numeric">
+          <span aria-hidden="true">–</span>
+          <input type="number" id="f-max" min="0" step="1000" placeholder="Máximo" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+    <div class="active-filters" id="active-filters" aria-live="polite"></div>
+  </section>
+
+  <section class="totals" aria-labelledby="totales-titulo">
+    <div class="totals-head">
+      <h2 id="totales-titulo" class="section-label">3. Resultado</h2>
+      <div class="measure-toggle" role="radiogroup" aria-label="Importe que se suma" id="measure-toggle"></div>
+    </div>
+    <div class="hero" id="hero">
+      <div class="hero-label" id="hero-label">Cargando datos…</div>
+      <div class="hero-value" id="hero-value">—</div>
+      <div class="hero-words" id="hero-words"></div>
+      <div class="hero-foot" id="hero-foot"></div>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><div class="stat-label">Registros</div><div class="stat-value" id="s-n">—</div></div>
+      <div class="stat"><div class="stat-label">Países y destinos</div><div class="stat-value" id="s-paises">—</div></div>
+      <div class="stat"><div class="stat-label">Periodo</div><div class="stat-value" id="s-periodo">—</div></div>
+      <div class="stat"><div class="stat-label" id="s-media-label">Importe medio por registro</div><div class="stat-value" id="s-media">—</div></div>
+    </div>
+    <div class="progress" id="progress" hidden><div class="progress-bar" id="progress-bar"></div><span id="progress-text"></span></div>
+  </section>
+
+  <section class="charts" aria-label="Gráficas">
+    <figure class="card card-wide">
+      <figcaption><h3>Evolución anual del total</h3><p class="card-sub" id="c-anual-sub"></p></figcaption>
+      <div class="chart" id="c-anual" role="img" aria-label="Gráfica de columnas con el importe total de cada año"></div>
+    </figure>
+    <figure class="card card-wide">
+      <figcaption><h3>Mapa por importe recibido</h3><p class="card-sub" id="c-mapa-sub"></p></figcaption>
+      <div class="chart chart-map" id="c-mapa" role="img" aria-label="Mapa del mundo coloreado según el importe recibido por cada país"></div>
+    </figure>
+    <figure class="card">
+      <figcaption><h3>Países y destinos con más importe</h3><p class="card-sub">Los 15 primeros</p></figcaption>
+      <div class="chart chart-tall" id="c-paises" role="img" aria-label="Ranking de países por importe"></div>
+    </figure>
+    <figure class="card">
+      <figcaption><h3>Reparto por ministerio u organismo</h3><p class="card-sub">Los 12 primeros; el resto, agrupado</p></figcaption>
+      <div class="chart chart-tall" id="c-org" role="img" aria-label="Importe por ministerio u organismo"></div>
+    </figure>
+    <figure class="card card-wide">
+      <figcaption><h3>Principales beneficiarios</h3><p class="card-sub" id="c-benef-sub">Los 15 primeros</p></figcaption>
+      <div class="chart chart-tall" id="c-benef" role="img" aria-label="Ranking de beneficiarios por importe"></div>
+    </figure>
+  </section>
+
+  <section class="records" aria-labelledby="registros-titulo">
+    <div class="records-head">
+      <h2 id="registros-titulo" class="section-label">4. Registros</h2>
+      <div class="downloads">
+        <button type="button" class="btn" id="dl-csv">Descargar CSV</button>
+        <button type="button" class="btn" id="dl-xlsx">Descargar Excel</button>
+      </div>
+    </div>
+    <p class="records-note">Pulsa en una fila para ver la ficha completa. Las descargas incluyen todos los registros filtrados.</p>
+    <div class="table-wrap">
+      <table class="table" id="tabla">
+        <thead><tr>
+          <th scope="col" data-sort="a">Año</th>
+          <th scope="col" data-sort="t">Título oficial</th>
+          <th scope="col" data-sort="b">Beneficiario</th>
+          <th scope="col" data-sort="pn">País o destino</th>
+          <th scope="col" data-sort="org">Organismo</th>
+          <th scope="col" data-sort="imp" class="num">Importe</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="pager">
+      <button type="button" class="btn" id="prev">Anterior</button>
+      <span id="page-info"></span>
+      <button type="button" class="btn" id="next">Siguiente</button>
+    </div>
+  </section>
+</main>
+
+<dialog id="ficha" class="ficha" aria-labelledby="ficha-titulo">
+  <form method="dialog" class="ficha-close"><button class="btn-link" aria-label="Cerrar ficha">Cerrar ✕</button></form>
+  <div id="ficha-body"></div>
+</dialog>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p id="footer-update"></p>
+    <p>Fuentes: <a href="https://www.oecd.org/en/data/datasets/creditor-reporting-system-crs.html" rel="noopener">OCDE · Creditor Reporting System</a> ·
+      <a href="https://www.infosubvenciones.es/" rel="noopener">IGAE · Base de Datos Nacional de Subvenciones</a> ·
+      <a href="https://iatistandard.org/" rel="noopener">IATI · AECID</a>. Tipos de cambio: Banco Central Europeo.
+      Lee la <a href="metodologia.html">metodología</a> antes de comparar cifras entre fuentes.</p>
+    <p>Web independiente, gratuita y de código abierto. No pertenece a ninguna administración pública.</p>
+  </div>
+</footer>
+
+<script src="assets/vendor/echarts.min.js" defer></script>
+<script src="assets/vendor/topojson-client.min.js" defer></script>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
