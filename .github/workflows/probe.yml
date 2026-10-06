@@ -2,6 +2,9 @@ name: probe
 on:
   push:
     branches: [probe]
+    paths: [tools/**, .github/workflows/probe.yml]
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -13,4 +16,12 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python tools/probe2.py ${{ matrix.part }} 2>&1 | grep -v '^\s*$'
+      - run: |
+          mkdir -p probe-out
+          python tools/probe3.py ${{ matrix.part }} > probe-out/${{ matrix.part }}.txt 2>&1 || true
+          tail -5 probe-out/${{ matrix.part }}.txt
+      - run: |
+          git config user.name "probe-bot"; git config user.email "probe@users.noreply.github.com"
+          git add probe-out
+          git commit -qm "probe output ${{ matrix.part }}"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin probe && git push -q origin HEAD:probe && break; sleep $((i*3)); done
