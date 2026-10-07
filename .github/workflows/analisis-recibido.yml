@@ -11,14 +11,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        part: [dac2a2, greenbook, eeapdf]
+        part: [dportal, bde]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
       - run: |
           mkdir -p out
-          python tools/recibido.py ${{ matrix.part }} > out/${{ matrix.part }}.txt 2>&1 || true
+          python tools/recibido2.py ${{ matrix.part }} > out/${{ matrix.part }}.txt 2>&1 || true
           tail -3 out/${{ matrix.part }}.txt
       - run: |
           git config user.name "analisis-bot"; git config user.email "analisis@users.noreply.github.com"
