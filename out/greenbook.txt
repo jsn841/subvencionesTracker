@@ -1,25 +1,11 @@
-Traceback (most recent call last):
-  File "/home/runner/work/subvencionesTracker/subvencionesTracker/tools/recibido.py", line 35, in <module>
-    s = get("https://catalog.data.gov/api/3/action/package_search?q=greenbook%20overseas%20loans%20grants&rows=10")
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/subvencionesTracker/subvencionesTracker/tools/recibido.py", line 6, in get
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
-    return opener.open(url, data, timeout)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 521, in open
-    response = meth(req, response)
-               ^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 630, in http_response
-    response = self.parent.error(
-               ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 559, in error
-    return self._call_chain(*args)
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
-    result = func(*args)
-             ^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
-    raise HTTPError(req.full_url, code, msg, hdrs, fp)
-urllib.error.HTTPError: HTTP Error 404: Not Found
+CATALOG ERR HTTP Error 404: Not Found
+  HEISS data/us_foreignaid_greenbook.xlsx
+TRY https://s3.amazonaws.com/files.explorer.devtechlab.com/us_foreign_aid_complete.csv 3753448682
+HEAD ['Country ID', 'Country Code', 'Country Name', 'Region ID', 'Region Name', 'Income Group ID', 'Income Group Name', 'Income Group Acronym', 'Managing Agency ID', 'Managing Agency Acronym', 'Managing Agency Name', 'Managing Sub-agency or Bureau ID', 'Managing Sub-agency or Bureau Acronym', 'Managing Sub-agency or Bureau Name', 'Implementing Partner Category ID', 'Implementing Partner Category Name', 'Implementing Partner Sub-category ID', 'Implementing Partner Sub-category Name', 'Implementing Partner ID', 'Implementing Partner Name', 'International Category ID', 'International Category Name', 'International Sector Code', 'International Sector Name', 'International Purpose Code', 'International Purpose Name', 'US Category ID', 'US Category Name', 'US Sector ID', 'US Sector Name', 'Funding Account ID', 'Funding Account Name', 'Funding Agency ID', 'Funding Agency Name', 'Funding Agency Acronym', 'Foreign Assistance Objective ID', 'Foreign Assistance Objective Name', 'Aid Type Group ID', 'Aid Type Group Name', 'Activity ID', 'Submission ID', 'Activity Name', 'Activity Description', 'Activity Project Number', 'Activity Start Date', 'Activity End Date', 'Transaction Type ID', 'Transaction Type Name', 'Fiscal Year', 'Transaction Date', 'Current Dollar Amount', 'Constant Dollar Amount', 'aid_type_id', 'aid_type_name', 'activity_budget_amount', 'submission_activity_id']
+SPAIN ROWS 370
+ROW ['724', 'ESP', 'Spain', '2', 'Europe and Eurasia', '4', 'High Income Country', 'HIC', '1', 'USAID', 'U.S. Agency for International Development', '999', 'NULL', 'not applicable', '1', 'Government', '1', 'Government - United States', '1999999', 'U.S. Government - Other', '7', 'Other', '430', 'Other Multisector', '43010', 'Multisector aid', '5', 'Economic Development', '25', 'Macroeconomic Foundation for Growth', '12x2278', 'Public Law 480 Title II Grants', '5', 'Department of Agriculture', 'AGR', '1', 'Economic', '3', 'Project-Type', '73', '1', 'Title II Development Programs', 'Title II Development Programs', 'NULL', 'NULL', 'NULL', '2', 'Obligations', '1952', '', '100000', '973939', '8', 'Project-type interventions - not Investment Related', '', '73']
+ROW ['724', 'ESP', 'Spain', '2', 'Europe and Eurasia', '4', 'High Income Country', 'HIC', '1', 'USAID', 'U.S. Agency for International Development', '999', 'NULL', 'not applicable', '1', 'Government', '1', 'Government - United States', '1999999', 'U.S. Government - Other', '7', 'Other', '430', 'Other Multisector', '43010', 'Multisector aid', '5', 'Economic Development', '25', 'Macroeconomic Foundation for Growth', '12x2278', 'Public Law 480 Title II Grants', '5', 'Department of Agriculture', 'AGR', '1', 'Economic', '3', 'Project-Type', '73', '1', 'Title II Development Programs', 'Title II Development Programs', 'NULL', 'NULL', 'NULL', '2', 'Obligations', '1955', '', '19200000', '180171679', '8', 'Project-type interventions - not Investment Related', '', '73']
+ROW ['724', 'ESP', 'Spain', '2', 'Europe and Eurasia', '4', 'High Income Country', 'HIC', '1', 'USAID', 'U.S. Agency for International Development', '999', 'NULL', 'not applicable', '1', 'Government', '1', 'Government - United States', '1999999', 'U.S. Government - Other', '7', 'Other', '430', 'Other Multisector', '43010', 'Multisector aid', '5', 'Economic Development', '25', 'Macroeconomic Foundation for Growth', '12x2278', 'Public Law 480 Title II Grants', '5', 'Department of Agriculture', 'AGR', '1', 'Economic', '3', 'Project-Type', '73', '1', 'Title II Development Programs', 'Title II Development Programs', 'NULL', 'NULL', 'NULL', '2', 'Obligations', '1956', '', '33800000', '309276014', '8', 'Project-type interventions - not Investment Related', '', '73']
+ROW ['724', 'ESP', 'Spain', '2', 'Europe and Eurasia', '4', 'High Income Country', 'HIC', '1', 'USAID', 'U.S. Agency for International Development', '999', 'NULL', 'not applicable', '1', 'Government', '1', 'Government - United States', '1999999', 'U.S. Government - Other', '7', 'Other', '430', 'Other Multisector', '43010', 'Multisector aid', '5', 'Economic Development', '25', 'Macroeconomic Foundation for Growth', '12x2278', 'Public Law 480 Title II Grants', '5', 'Department of Agriculture', 'AGR', '1', 'Economic', '3', 'Project-Type', '73', '1', 'Title II Development Programs', 'Title II Development Programs', 'NULL', 'NULL', 'NULL', '2', 'Obligations', '1957', '', '17800000', '156952538', '8', 'Project-type interventions - not Investment Related', '', '73']
+ROW ['724', 'ESP', 'Spain', '2', 'Europe and Eurasia', '4', 'High Income Country', 'HIC', '1', 'USAID', 'U.S. Agency for International Development', '999', 'NULL', 'not applicable', '1', 'Government', '1', 'Government - United States', '1999999', 'U.S. Government - Other', '7', 'Other', '430', 'Other Multisector', '43010', 'Multisector aid', '5', 'Economic Development', '25', 'Macroeconomic Foundation for Growth', '12x2278', 'Public Law 480 Title II Grants', '5', 'Department of Agriculture', 'AGR', '1', 'Economic', '3', 'Project-Type', '73', '1', 'Title II Development Programs', 'Title II Development Programs', 'NULL', 'NULL', 'NULL', '2', 'Obligations', '1958', '', '38900000', '332954993', '8', 'Project-type interventions - not Investment Related', '', '73']
+DONE True
