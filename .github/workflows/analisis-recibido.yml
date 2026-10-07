@@ -1,0 +1,27 @@
+name: analisis-recibido
+on:
+  push:
+    branches: [analisis-recibido]
+    paths: [tools/**, .github/workflows/analisis-recibido.yml]
+permissions:
+  contents: write
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [dac2a, crs, greenbook, eea]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: |
+          mkdir -p out
+          python tools/recibido.py ${{ matrix.part }} > out/${{ matrix.part }}.txt 2>&1 || true
+          tail -3 out/${{ matrix.part }}.txt
+      - run: |
+          git config user.name "analisis-bot"; git config user.email "analisis@users.noreply.github.com"
+          find out -size +40M -delete
+          git add out; git commit -qm "salida ${{ matrix.part }}" || exit 0
+          for i in 1 2 3 4 5; do git pull -q --rebase origin analisis-recibido && git push -q origin HEAD:analisis-recibido && break; sleep $((i*4)); done
