@@ -1,0 +1,44 @@
+FLOW public DSD_DAC2@DF_DAC2A ['DONOR', 'RECIPIENT', 'MEASURE', 'UNIT_MEASURE', 'PRICE_BASE']
+  CL CL_UNIT_MEASURE [('ESP', 'Spanish peseta')]
+  CL CL_AREA_ORG [('ESP', 'Spain')]
+  CL CL_UNIT_MULT [('1', 'Tens')]
+FLOW public DSD_DAC1@DF_DAC1 ['DONOR', 'SECTOR', 'MEASURE', 'TYING_STATUS', 'FLOW_TYPE', 'UNIT_MEASURE', 'PRICE_BASE']
+  CL CL_UNIT_MEASURE [('ESP', 'Spanish peseta')]
+  CL CL_AREA_ORG [('ESP', 'Spain')]
+  CL CL_DAC157_MEASURE [('1', 'Gross National Income (GNI)')]
+  CL CL_DECIMALS [('1', 'One')]
+  CL CL_UNIT_MULT [('1', 'Tens')]
+ERR dcd-public DSD_DAC2@DF_DAC2A HTTP Error 404: Not Found
+ERR dcd-public DSD_DAC1@DF_DAC1 HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.ESP...?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/..ESP..?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.ESP....?format=csvfilewithlabels HTTP Error 404: Not Found
+OK https://sdmx.oecd.org/public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/ESP....?format=csvfilewithlabels 31792577
+V STRUCTURE [('DATAFLOW', 123290)]
+V STRUCTURE_ID [('OECD.DCD.FSD:DSD_DAC2@DF_DAC2A(1.6)', 123290)]
+V STRUCTURE_NAME [('DAC2A: Aid (ODA) disbursements to countries and regions', 123290)]
+V ACTION [('I', 123290)]
+V DONOR [('ESP', 123290)]
+V Donor [('Spain', 123290)]
+V MEASURE [('106', 15352), ('250', 12258), ('206', 12258), ('240', 12210), ('201', 11840), ('296', 9202), ('286', 9184), ('207', 8880), ('218', 5998), ('216', 4978), ('205', 4766), ('204', 4170), ('209', 3634), ('213', 2998), ('255', 1302), ('212', 1114), ('219', 688), ('214', 546), ('215', 526), ('210', 516), ('217', 488), ('221', 334), ('211', 48)]
+V Measure [('Imputed multilateral ODA', 15352), ('ODA, total net excluding debt relief', 12258), ('Official development assistance (ODA), disbursements', 12258), ('Gross ODA', 12210), ('ODA grants, disbursements', 11840), ('ODA per capita', 9202), ('ODA as percent of recipient GNI', 9184), ('Technical cooperation, disbursements', 8880), ('ODA Loans, net disbursements', 5998), ('Humanitarian aid', 4978), ('ODA Loans, repayments', 4766), ('Gross ODA Loans', 4170), ('Interest received, ODA', 3634), ('Development food aid', 2998), ('Net debt relief', 1302), ('Debt forgiveness', 1114), ('Recoveries on grants', 688), ('ODA Loans, rescheduled debt', 546), ('Offsetting entries for debt relief (ODA claims)', 526), ('Capital subscriptions, deposits', 516), ('ODA Loans, equity investment', 488), ('Other debt grants', 334), ('Memo: capital subscriptions, encashment basis', 48)]
+V UNIT_MEASURE [('USD', 123290)]
+V Unit of measure [('US dollar', 123290)]
+V PRICE_BASE [('Q', 61645), ('V', 61645)]
+V Price base [('Constant prices', 61645), ('Current prices', 61645)]
+V TIME_PERIOD [('2010', 4062), ('2009', 3946), ('2008', 3944), ('2011', 3860), ('2006', 3836), ('2005', 3754), ('2007', 3754), ('2017', 3748), ('2016', 3710), ('2020', 3670), ('2013', 3618), ('2019', 3580), ('2022', 3564), ('2004', 3564), ('2021', 3554), ('2018', 3550), ('2003', 3542), ('2002', 3506), ('2023', 3502), ('2001', 3434), ('1998', 3432), ('2015', 3392), ('2014', 3384), ('2024', 3338), ('2012', 3248), ('1997', 3212), ('1996', 3208), ('1999', 3120), ('1995', 3074), ('2000', 3016), ('1994', 2676), ('1993', 2660), ('1991', 2514), ('1992', 2452), ('1989', 2162), ('1990', 2114), ('1988', 1000), ('1987', 996), ('1986', 212), ('1985', 102), ('1980', 56), ('1981', 56), ('1982', 56), ('1983', 56), ('1984', 56)]
+V Time period [('', 123290)]
+V Observation value [('', 123290)]
+V BASE_PER [('2024', 61645), ('', 61645)]
+V Base period [('', 123290)]
+V UNIT_MULT [('6', 123290)]
+V Unit multiplier [('Millions', 123290)]
+V FLOW_TYPE [('D', 123290)]
+V Flow type [('Disbursements', 123290)]
+V OBS_STATUS [('A', 123290)]
+V Observation status [('Normal value', 123290)]
+YEARS ['1980', '1981', '1982', '1983', '1984', '1985', '1986', '1987', '1988', '1989', '1990', '1991', '1992', '1993', '1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024']
+ERR https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.ESP...?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/..ESP..?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/.ESP....?format=csvfilewithlabels HTTP Error 404: Not Found
+ERR https://sdmx.oecd.org/dcd-public/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/ESP....?format=csvfilewithlabels HTTP Error 404: Not Found
