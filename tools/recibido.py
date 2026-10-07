@@ -8,7 +8,32 @@ def get(url, headers=None, timeout=900):
         return gzip.decompress(b) if r.headers.get("Content-Encoding") == "gzip" else b
 def p(*a): print(*a, flush=True)
 part = sys.argv[1]
-if part == "dac2a":
+if part == "dac2a2":
+    H = {"Accept": "application/vnd.sdmx.structure+json;version=1.0"}
+    for space in ["public", "dcd-public"]:
+        for flow in ["DSD_DAC2@DF_DAC2A", "DSD_DAC1@DF_DAC1"]:
+            try:
+                st = json.loads(get(f"https://sdmx.oecd.org/{space}/rest/dataflow/OECD.DCD.FSD/{flow}/latest?references=all", headers=H))
+                d = st["data"]
+                dims = [x["id"] for x in d["dataStructures"][0]["dataStructureComponents"]["dimensionList"]["dimensions"]]
+                p("FLOW", space, flow, dims)
+                for cl in d.get("codelists", []):
+                    hits = [(c["id"], c.get("name")) for c in cl["codes"] if "Spain" in str(c.get("name")) or c["id"] in ("ESP", "1", "50")]
+                    if hits: p("  CL", cl["id"], hits[:10])
+            except Exception as e: p("ERR", space, flow, str(e)[:150])
+    for space in ["public", "dcd-public"]:
+        for key in [".ESP...", "..ESP..", ".ESP....", "ESP...."]:
+            u = f"https://sdmx.oecd.org/{space}/rest/data/OECD.DCD.FSD,DSD_DAC2@DF_DAC2A,/{key}?format=csvfilewithlabels"
+            try:
+                txt = get(u).decode("utf-8-sig"); p("OK", u, len(txt))
+                open(f"out/dac2a_{space}.csv", "w").write(txt)
+                rows = list(csv.DictReader(io.StringIO(txt)))
+                for k in rows[0]:
+                    if len(set(r[k] for r in rows)) < 60: p("V", k, collections.Counter(r[k] for r in rows).most_common(60))
+                p("YEARS", sorted(set(r["TIME_PERIOD"] for r in rows))); break
+            except Exception as e: p("ERR", u, str(e)[:100])
+            time.sleep(3)
+elif part == "dac2a":
     # 1) estructura DAC2A
     for flow in ["DSD_DAC2@DF_DAC2A"]:
         st = json.loads(get(f"https://sdmx.oecd.org/public/rest/dataflow/OECD.DCD.FSD/{flow}/latest?references=datastructure",
@@ -32,9 +57,11 @@ elif part == "crs":
                         headers={"Accept": "application/vnd.sdmx.structure+json;version=1.0"}))
     p("AVAIL", json.dumps(st)[:800])
 elif part == "greenbook":
-    s = get("https://catalog.data.gov/api/3/action/package_search?q=greenbook%20overseas%20loans%20grants&rows=10")
-    j = json.loads(s)
     urls = []
+    try:
+        j = json.loads(get("https://catalog.data.gov/api/3/action/package_search?q=greenbook&rows=10"))
+    except Exception as e:
+        p("CATALOG ERR", e); j = {"result": {"results": []}}
     for pk in j["result"]["results"]:
         p("PKG", pk["title"])
         for r in pk.get("resources", []):
@@ -67,6 +94,18 @@ elif part == "greenbook":
                 done = True; break
         except Exception as e: p("ERR", u, str(e)[:200])
     p("DONE", done)
+elif part == "eeapdf":
+    import subprocess
+    for u in ["https://eeagrants.org/sites/default/files/resources/EEA%20and%20Norway%20Grants%202009-2014%20-%20Spain%20Factsheet.pdf",
+              "https://www.regjeringen.no/en/topics/european-policy/norwaygrants/which-countries-benefit/id685572"]:
+        try:
+            b = get(u)
+            if b[:4] == b"%PDF":
+                open("/tmp/f.pdf", "wb").write(b); subprocess.run(["pdftotext", "-layout", "/tmp/f.pdf", "/tmp/f.txt"]); p("PDF", u); p(open("/tmp/f.txt").read()[:5000])
+            else:
+                t = re.sub(r"\s+", " ", re.sub(r"<script.*?</script>|<style.*?</style>|<[^>]+>", " ", b.decode("utf-8", "replace"), flags=re.S))
+                i = t.find("Spain"); p("PAGE", u); p(t[max(0, i-2500):i+2500])
+        except Exception as e: p("ERR", u, e)
 elif part == "eea":
     for u in ["https://data.eeagrants.org/api/periods", "https://data.eeagrants.org/api/v1/beneficiaries",
               "https://eeagrants.org/countries/spain", "https://data.eeagrants.org/data"]:

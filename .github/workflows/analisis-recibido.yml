@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        part: [dac2a, crs, greenbook, eea]
+        part: [dac2a2, greenbook, eeapdf]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
