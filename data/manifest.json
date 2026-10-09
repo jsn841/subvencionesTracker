@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T05:31:27Z",
+ "generado": "2026-10-09T15:46:11Z",
  "capas": {
   "aod": {
    "nombre": "Ayuda Oficial al Desarrollo (CRS de la OCDE)",
@@ -12,7 +12,7 @@
     {
      "anio": 1995,
      "archivo": "data/aod/1995.json",
-     "bytes": 4713,
+     "bytes": 5038,
      "registros": 25,
      "importe": 0,
      "importe2": 0,
@@ -21,7 +21,7 @@
     {
      "anio": 1996,
      "archivo": "data/aod/1996.json",
-     "bytes": 7748,
+     "bytes": 8357,
      "registros": 45,
      "importe": 0,
      "importe2": 0,
@@ -30,7 +30,7 @@
     {
      "anio": 1997,
      "archivo": "data/aod/1997.json",
-     "bytes": 498812,
+     "bytes": 516002,
      "registros": 2817,
      "importe": 0,
      "importe2": 0,
@@ -39,7 +39,7 @@
     {
      "anio": 1999,
      "archivo": "data/aod/1999.json",
-     "bytes": 557786,
+     "bytes": 575974,
      "registros": 2962,
      "importe": 0,
      "importe2": 962953815.67,
@@ -48,7 +48,7 @@
     {
      "anio": 2000,
      "archivo": "data/aod/2000.json",
-     "bytes": 603321,
+     "bytes": 622313,
      "registros": 3096,
      "importe": 0,
      "importe2": 1028901868.18,
@@ -57,7 +57,7 @@
     {
      "anio": 2001,
      "archivo": "data/aod/2001.json",
-     "bytes": 772506,
+     "bytes": 796202,
      "registros": 3880,
      "importe": 0,
      "importe2": 1372941492.55,
@@ -66,7 +66,7 @@
     {
      "anio": 2004,
      "archivo": "data/aod/2004.json",
-     "bytes": 1252511,
+     "bytes": 1286437,
      "registros": 5596,
      "importe": 1244135056.73,
      "importe2": 1172614492.91,
@@ -75,7 +75,7 @@
     {
      "anio": 2005,
      "archivo": "data/aod/2005.json",
-     "bytes": 2843434,
+     "bytes": 2930442,
      "registros": 14429,
      "importe": 1592048795.13,
      "importe2": 1548404134.31,
@@ -84,7 +84,7 @@
     {
      "anio": 2006,
      "archivo": "data/aod/2006.json",
-     "bytes": 2411884,
+     "bytes": 2477142,
      "registros": 10804,
      "importe": 1821582171.62,
      "importe2": 2138763274.83,
@@ -93,7 +93,7 @@
     {
      "anio": 2008,
      "archivo": "data/aod/2008.json",
-     "bytes": 2457710,
+     "bytes": 2523376,
      "registros": 10872,
      "importe": 3679255598.32,
      "importe2": 3321873113.08,
@@ -102,7 +102,7 @@
     {
      "anio": 2009,
      "archivo": "data/aod/2009.json",
-     "bytes": 3162945,
+     "bytes": 3244973,
      "registros": 13599,
      "importe": 3400671497.23,
      "importe2": 3136402932.16,
@@ -111,7 +111,7 @@
     {
      "anio": 2012,
      "archivo": "data/aod/2012.json",
-     "bytes": 1746625,
+     "bytes": 1792432,
      "registros": 7566,
      "importe": 835008847.23,
      "importe2": 889167486.99,
@@ -120,7 +120,7 @@
     {
      "anio": 2013,
      "archivo": "data/aod/2013.json",
-     "bytes": 1622881,
+     "bytes": 1666540,
      "registros": 7208,
      "importe": 990854845.37,
      "importe2": 819427927.56,
@@ -129,7 +129,7 @@
     {
      "anio": 2014,
      "archivo": "data/aod/2014.json",
-     "bytes": 1592915,
+     "bytes": 1635572,
      "registros": 7041,
      "importe": 533894212.98,
      "importe2": 667247881.86,
@@ -138,7 +138,7 @@
     {
      "anio": 2015,
      "archivo": "data/aod/2015.json",
-     "bytes": 1255114,
+     "bytes": 1288165,
      "registros": 5440,
      "importe": 687195529.1,
      "importe2": 627179167.94,
@@ -147,7 +147,7 @@
     {
      "anio": 2017,
      "archivo": "data/aod/2017.json",
-     "bytes": 1376940,
+     "bytes": 1413953,
      "registros": 6039,
      "importe": 1021444678.77,
      "importe2": 1042615692.9,
@@ -156,7 +156,7 @@
     {
      "anio": 2019,
      "archivo": "data/aod/2019.json",
-     "bytes": 1583346,
+     "bytes": 1624676,
      "registros": 6758,
      "importe": 999927708.8,
      "importe2": 1031122603.84,
@@ -165,7 +165,7 @@
     {
      "anio": 2020,
      "archivo": "data/aod/2020.json",
-     "bytes": 1663623,
+     "bytes": 1708301,
      "registros": 6953,
      "importe": 907172897.92,
      "importe2": 887645744.57,
@@ -174,7 +174,7 @@
     {
      "anio": 2021,
      "archivo": "data/aod/2021.json",
-     "bytes": 1819119,
+     "bytes": 1867297,
      "registros": 7528,
      "importe": 1337885922.37,
      "importe2": 1370866002.09,
@@ -183,7 +183,7 @@
     {
      "anio": 2023,
      "archivo": "data/aod/2023.json",
-     "bytes": 1950045,
+     "bytes": 2002803,
      "registros": 8096,
      "importe": 1480185218.19,
      "importe2": 1521694218.56,
@@ -192,7 +192,7 @@
     {
      "anio": 2024,
      "archivo": "data/aod/2024.json",
-     "bytes": 2001728,
+     "bytes": 2054205,
      "registros": 8116,
      "importe": 1688466900.37,
      "importe2": 1891571040.74,
@@ -382,7 +382,7 @@
     {
      "anio": 2022,
      "archivo": "data/bdns/2022.json",
-     "bytes": 1960891,
+     "bytes": 1994734,
      "registros": 5029,
      "importe": 735928109.27,
      "importe2": 735928109.27,
@@ -391,7 +391,7 @@
     {
      "anio": 2023,
      "archivo": "data/bdns/2023.json",
-     "bytes": 2143088,
+     "bytes": 2184730,
      "registros": 5476,
      "importe": 1413544469.24,
      "importe2": 1413544168.64,
@@ -400,7 +400,7 @@
     {
      "anio": 2024,
      "archivo": "data/bdns/2024.json",
-     "bytes": 2066813,
+     "bytes": 2101614,
      "registros": 5229,
      "importe": 965335748.18,
      "importe2": 965335748.18,
@@ -409,7 +409,7 @@
     {
      "anio": 2025,
      "archivo": "data/bdns/2025.json",
-     "bytes": 3026881,
+     "bytes": 3077765,
      "registros": 8095,
      "importe": 789765660.59,
      "importe2": 789765660.59,
@@ -418,7 +418,7 @@
     {
      "anio": 2026,
      "archivo": "data/bdns/2026.json",
-     "bytes": 980275,
+     "bytes": 996897,
      "registros": 2383,
      "importe": 396776491.48,
      "importe2": 396776491.48,
@@ -443,7 +443,7 @@
     {
      "anio": 2024,
      "archivo": "data/iati/2024.json",
-     "bytes": 183168,
+     "bytes": 186220,
      "registros": 479,
      "importe": 473611852.61,
      "importe2": 473611852.61,
@@ -452,7 +452,7 @@
     {
      "anio": 2025,
      "archivo": "data/iati/2025.json",
-     "bytes": 166759,
+     "bytes": 169541,
      "registros": 434,
      "importe": 422088352.15,
      "importe2": 422088352.15,
@@ -461,7 +461,7 @@
     {
      "anio": 2026,
      "archivo": "data/iati/2026.json",
-     "bytes": 5286,
+     "bytes": 5530,
      "registros": 11,
      "importe": 5943385.0,
      "importe2": 5943385.0,

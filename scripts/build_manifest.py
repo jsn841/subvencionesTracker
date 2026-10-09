@@ -8,7 +8,8 @@ import os
 import re
 from collections import Counter
 
-from common import DATA, load_state, now_iso, read_year
+from common import DATA, load_state, now_iso, read_year, write_year
+import gobiernos
 
 CAPAS = {
     "aod": {
@@ -38,7 +39,23 @@ CAPAS = {
 }
 
 
+def aplicar_gobiernos():
+    """Añade a cada registro el gobierno que estaba en el cargo en su fecha (o año)."""
+    for capa in CAPAS:
+        carpeta = os.path.join(DATA, capa)
+        if not os.path.isdir(carpeta):
+            continue
+        for fn in sorted(os.listdir(carpeta)):
+            if re.fullmatch(r"\d{4}\.json", fn):
+                y = int(fn[:4])
+                recs = read_year(capa, y)
+                for r in recs:
+                    r["gob"], r["gobp"], r["gobn"] = gobiernos.para_registro(capa, r)
+                write_year(capa, y, recs)
+
+
 def main():
+    aplicar_gobiernos()
     state = load_state()
     man = {"generado": now_iso(), "capas": {}}
     region_por_pais = Counter()

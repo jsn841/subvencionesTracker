@@ -51,8 +51,11 @@ CAMPOS = [
     "url",   # enlace al registro o a la consulta oficial
     "crit",  # criterio por el que el registro entra en la web
     "nota",  # observaciones
+    "gob",   # partidos del gobierno que concedía en esa fecha (ver scripts/gobiernos.py)
+    "gobp",  # partido de quien presidía ese gobierno
+    "gobn",  # descripción del gobierno (presidente/a, periodo, fecha verificada o no)
 ]
-DICT_COLS = {"bt", "p", "pn", "r", "adm", "org", "org2", "ins", "mod", "cat", "sec", "crit", "b"}
+DICT_COLS = {"bt", "p", "pn", "r", "adm", "org", "org2", "ins", "mod", "cat", "sec", "crit", "b", "gob", "gobp", "gobn"}
 
 
 def log(*a):

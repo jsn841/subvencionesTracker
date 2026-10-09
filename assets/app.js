@@ -27,9 +27,9 @@
     },
   };
   const NO_SUMA = "Cada fuente se muestra por separado y sus cifras no se suman entre sí, porque una misma ayuda puede aparecer en más de una.";
-  const DICT_COLS = ["b", "bt", "p", "pn", "r", "adm", "org", "org2", "ins", "mod", "cat", "sec", "crit"];
-  const MS_FIELDS = ["pn", "r", "adm", "org", "ins", "mod", "sec"];
-  const FIELD_LABEL = { pn: "País o destino", r: "Región", adm: "Administración", org: "Ministerio u organismo", ins: "Instrumento", mod: "Tipo de ayuda", sec: "Sector o finalidad" };
+  const DICT_COLS = ["b", "bt", "p", "pn", "r", "adm", "org", "org2", "ins", "mod", "cat", "sec", "crit", "gob", "gobp", "gobn"];
+  const MS_FIELDS = ["pn", "r", "adm", "org", "ins", "mod", "sec", "gobp", "gob"];
+  const FIELD_LABEL = { pn: "País o destino", r: "Región", adm: "Administración", org: "Ministerio u organismo", ins: "Instrumento", mod: "Tipo de ayuda", sec: "Sector o finalidad", gobp: "Partido que presidía el gobierno", gob: "Partidos en el gobierno" };
   const PAGE_SIZE = 50;
 
   // ---------- Formatos ----------
@@ -456,6 +456,7 @@
     barRanking("c-org", top);
     $("c-benef-sub").textContent = `Los 15 primeros · ${LAYERS[state.layer].benef}` + (state.layer === "bdns" ? ". Las personas físicas aparecen agrupadas y sin nombre." : "");
     barRanking("c-benef", groupBy("b", 15));
+    barRanking("c-gob", groupBy("gobp"));
     renderMap().catch((e) => { $("c-mapa-sub").textContent = "No se pudo cargar el mapa."; console.error(e); });
   }
 
@@ -532,6 +533,7 @@
       ["Comprometido (USD, publicado)", Number.isNaN(C.usd2[i]) ? null : fmtUSD.format(C.usd2[i])],
       ["Identificador oficial", C.ref[i]],
       ["Motivo de inclusión", v("crit")],
+      ["Gobierno en esa fecha", v("gobn") ? `${v("gob")} — ${v("gobn")}` : v("gob")],
       ["Observaciones", C.nota[i]],
     ].filter(([, val]) => val != null && val !== "");
     const m = C[state.measure][i];
@@ -573,6 +575,9 @@
       if (state.layer === "aod") { o["Desembolsado (USD)"] = Number.isNaN(C.usd[i]) ? null : C.usd[i]; o["Comprometido (USD)"] = Number.isNaN(C.usd2[i]) ? null : C.usd2[i]; }
       o["Identificador oficial"] = C.ref[i] || "";
       o["Motivo de inclusión"] = D.crit[C.crit[i]];
+      o["Partido que presidía el gobierno"] = D.gobp[C.gobp[i]];
+      o["Partidos en el gobierno"] = D.gob[C.gob[i]];
+      o["Gobierno (detalle)"] = D.gobn[C.gobn[i]];
       o["Observaciones"] = C.nota[i] || "";
       const l = enlaceOriginal(i)[0];
       o["Enlace"] = l ? l.href : "";

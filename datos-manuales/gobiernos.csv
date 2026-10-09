@@ -2,12 +2,12 @@ ambito_codigo,ambito,desde,hasta,presidente,partido_presidente,partidos_gobierno
 ES,Gobierno de España,1976-07-05,1981-02-26,Adolfo Suárez,UCD,UCD,Un partido,no,,Antes de 1979 no hubo investidura parlamentaria
 ES,Gobierno de España,1981-02-26,1982-12-02,Leopoldo Calvo-Sotelo,UCD,UCD,Un partido,no,,
 ES,Gobierno de España,1982-12-02,1996-05-05,Felipe González,PSOE,PSOE,Un partido,no,,
-ES,Gobierno de España,1996-05-05,2004-04-17,José María Aznar,PP,PP,Un partido,no,,
-ES,Gobierno de España,2004-04-17,2011-12-21,José Luis Rodríguez Zapatero,PSOE,PSOE,Un partido,no,,
-ES,Gobierno de España,2011-12-21,2018-06-02,Mariano Rajoy,PP,PP,Un partido,no,,
-ES,Gobierno de España,2018-06-02,2020-01-13,Pedro Sánchez,PSOE,PSOE,Un partido,no,,Llega por moción de censura
-ES,Gobierno de España,2020-01-13,2023-11-21,Pedro Sánchez,PSOE,PSOE;Unidas Podemos,Coalición,no,,
-ES,Gobierno de España,2023-11-21,,Pedro Sánchez,PSOE,PSOE;Sumar,Coalición,sí,https://en.wikipedia.org/wiki/Third_government_of_Pedro_S%C3%A1nchez,Elecciones generales convocadas para el 29-11-2026
+ES,Gobierno de España,1996-05-05,2004-04-17,José María Aznar,PP,PP,Un partido,sí,https://lamoncloa.gob.es/lang/en/gobierno/bylegislature/Paginas/20140520_VI_Legislature.aspx,
+ES,Gobierno de España,2004-04-17,2011-12-21,José Luis Rodríguez Zapatero,PSOE,PSOE,Un partido,sí,https://www.lamoncloa.gob.es/gobierno/gobiernosporlegislaturas/paginas/VIIILegislatura.aspx,
+ES,Gobierno de España,2011-12-21,2018-06-02,Mariano Rajoy,PP,PP,Un partido,sí,https://www.lamoncloa.gob.es/gobierno/gobiernosporlegislaturas/paginas/xlegislatura.aspx,
+ES,Gobierno de España,2018-06-02,2020-01-13,Pedro Sánchez,PSOE,PSOE,Un partido,sí,https://es.hispanopedia.com/wiki/Presidente_de_Espa%C3%B1a,Llega por moción de censura
+ES,Gobierno de España,2020-01-13,2023-11-21,Pedro Sánchez,PSOE,PSOE;Unidas Podemos,Coalición,sí,https://www.mallorcadiario.com/nuevos-ministros-toman-posesion-cargos-respeto-textos-protocolarios,
+ES,Gobierno de España,2023-11-21,,Pedro Sánchez,PSOE,PSOE;Sumar,Coalición,sí,https://theobjective.com/galerias/politica/2023-11-21/toma-posesion-nuevos-ministros-imagenes/,Sánchez promete el cargo el 17-11-2023; los ministros de la coalición toman posesión el 21-11-2023. Elecciones generales convocadas para el 29-11-2026
 AN,Andalucía,2019-01-18,2022-07-23,Juanma Moreno,PP,PP;Ciudadanos,Coalición,no,,
 AN,Andalucía,2022-07-23,2026-07-05,Juanma Moreno,PP,PP,Un partido,sí,https://www.101tv.es/la-toma-de-posesion-de-juanma-moreno-como-presidente-de-la-junta-de-andalucia-se-celebrara-el-sabado-23-de-julio/,Mayoría absoluta
 AN,Andalucía,2026-07-05,,Juanma Moreno,PP,PP;Vox,Coalición,sí,https://www.eldiario.es/andalucia/moreno-toma-posesion-pactar-vox-acuerdos-no-gustan-100-partes-firman_1_13357223.html,Primera vez que Vox entra en la Junta; consejeros juran el 10-07-2026
@@ -20,7 +20,7 @@ AS,Asturias,2023-07-27,,Adrián Barbón,PSOE,PSOE;IU-Convocatoria por Asturies,C
 IB,Illes Balears,2019-06-29,2023-07-07,Francina Armengol,PSOE,PSOE;Unidas Podemos;Més per Mallorca,Coalición,no,,
 IB,Illes Balears,2023-07-07,,Marga Prohens,PP,PP,Un partido,sí,https://en.wikipedia.org/wiki/Marga_Prohens,En minoría; Vox deja de apoyarlo en julio de 2024
 CN,Canarias,2019-07-16,2023-07-14,Ángel Víctor Torres,PSOE,PSOE;Nueva Canarias;Podemos;ASG,Coalición,no,,
-CN,Canarias,2023-07-14,,Fernando Clavijo,CC,CC;PP,Coalición,no,,Investido el 12-07-2023; fecha de toma de posesión por confirmar
+CN,Canarias,2023-07-14,,Fernando Clavijo,CC,CC;PP,Coalición,sí,https://rtvc.es/en-directo-toma-de-posesion-de-fernando-clavijo-como-presidente-de-canarias/,Investido el 12-07-2023
 CB,Cantabria,2019-07-03,2023-07-05,Miguel Ángel Revilla,PRC,PRC;PSOE,Coalición,no,,
 CB,Cantabria,2023-07-05,,María José Sáenz de Buruaga,PP,PP,Un partido,sí,https://www.cantabria.es/web/comunicados/w/buruaga-presidenta-toma-posesi%C3%B3n-gobierno-cantabria,En minoría
 CM,Castilla-La Mancha,2015-07-04,,Emiliano García-Page,PSOE,PSOE,Un partido,no,,Coalición con Podemos 2017-2019 (fuera del periodo con datos BDNS)
@@ -28,27 +28,27 @@ CL,Castilla y León,2021-12-20,2022-04-19,Alfonso Fernández Mañueco,PP,PP,Un p
 CL,Castilla y León,2022-04-19,2024-07-12,Alfonso Fernández Mañueco,PP,PP;Vox,Coalición,sí,https://www.elespanol.com/castilla-y-leon/region/20220411/manueco-investido-presidente-castilla-leon-vox-oposicion/664184007_0.html,Investido el 11-04-2022
 CL,Castilla y León,2024-07-12,2026-06-11,Alfonso Fernández Mañueco,PP,PP,Un partido,sí,https://srv00.epimg.net/pdf/elpais/1aPagina/2024/07/ep-20240713.pdf,Vox sale; el consejero de Cultura (ex-Vox) sigue como independiente
 CL,Castilla y León,2026-06-11,,Alfonso Fernández Mañueco,PP,PP;Vox,Coalición,sí,https://www.lagacetadesalamanca.es/castilla-y-leon/ausencias-presencias-toma-posesion-gobierno-alfonso-fernandez-20260611132508-nt.html,Investido el 09-06-2026
-CT,Cataluña,2021-05-24,2022-10-10,Pere Aragonès,ERC,ERC;Junts,Coalición,no,,
-CT,Cataluña,2022-10-10,2024-08-10,Pere Aragonès,ERC,ERC,Un partido,no,https://es.ara.cat/politica/junts-decide-salir-govern_1_4511706.html,Junts decide salir el 07-10-2022; fecha efectiva aproximada
+CT,Cataluña,2021-05-24,2022-10-11,Pere Aragonès,ERC,ERC;Junts,Coalición,no,,
+CT,Cataluña,2022-10-11,2024-08-10,Pere Aragonès,ERC,ERC,Un partido,sí,https://orain.eus/es/politica/2022/10/11/los-nuevos-siete-consellers-toman-posesion-de-sus-cargos-11-de-octubre-de-2022/,Junts decide salir el 07-10-2022; los nuevos consellers toman posesión el 11-10-2022
 CT,Cataluña,2024-08-10,,Salvador Illa,PSC,PSC,Un partido,sí,https://www.elindependiente.com/espana/2024/08/10/salvador-illa-toma-posesion-como-president-de-la-generalitat/,En minoría
 VC,Comunitat Valenciana,2019-06-17,2023-07-17,Ximo Puig,PSOE,PSOE;Compromís;Unidas Podemos,Coalición,no,,
-VC,Comunitat Valenciana,2023-07-17,2024-07-12,Carlos Mazón,PP,PP;Vox,Coalición,no,https://www.newtral.es/presidentes-comunidad-valenciana-extremadura-mazon-guardiola-boe/20230715/,Investido el 13-07-2023; nombramiento en el BOE el 15-07-2023
+VC,Comunitat Valenciana,2023-07-17,2024-07-12,Carlos Mazón,PP,PP;Vox,Coalición,sí,https://valenciaplaza.com/valenciaplaza/boe-publica-nombramiento-carlos-mazon-president-generalitat-valenciana,Investido el 13-07-2023; nombramiento en el BOE el 15-07-2023
 VC,Comunitat Valenciana,2024-07-12,2025-12-02,Carlos Mazón,PP,PP,Un partido,sí,https://srv00.epimg.net/pdf/elpais/1aPagina/2024/07/ep-20240713.pdf,Vox sale; Mazón dimite el 03-11-2025 y sigue en funciones
-VC,Comunitat Valenciana,2025-12-02,,Juanfran Pérez Llorca,PP,PP,Un partido,no,https://valenciaplaza.com/valenciaplaza/comunitat-valenciana1/perez-llorca-toma-posesion-como-president-en-medio-de-la-anomalia-institucional,Investido con apoyo de Vox; fecha de toma de posesión por confirmar
-EX,Extremadura,2019-06-27,2023-07-14,Guillermo Fernández Vara,PSOE,PSOE,Un partido,no,,
-EX,Extremadura,2023-07-14,2024-07-12,María Guardiola,PP,PP;Vox,Coalición,no,https://www.newtral.es/presidentes-comunidad-valenciana-extremadura-mazon-guardiola-boe/20230715/,Fecha del Real Decreto de nombramiento
+VC,Comunitat Valenciana,2025-12-02,,Juanfran Pérez Llorca,PP,PP,Un partido,sí,https://www.ultimahora.es/noticias/comunidades/2025/12/01/2523117/juanfran-perez-llorca-tomara-posesion-este-martes-como-president-generalitat-jura-cargo.html,Investido con apoyo de Vox
+EX,Extremadura,2019-06-27,2023-07-17,Guillermo Fernández Vara,PSOE,PSOE,Un partido,no,,
+EX,Extremadura,2023-07-17,2024-07-12,María Guardiola,PP,PP;Vox,Coalición,sí,https://www.juntaex.es/w/maria-guardiola-toma-posesion-como-presidenta-de-la-junta-de-extremadura,Investida el 14-07-2023
 EX,Extremadura,2024-07-12,2026-04-24,María Guardiola,PP,PP,Un partido,sí,https://srv00.epimg.net/pdf/elpais/1aPagina/2024/07/ep-20240713.pdf,Vox sale; su consejero sigue como independiente
-EX,Extremadura,2026-04-24,,María Guardiola,PP,PP;Vox,Coalición,no,https://www.elindependiente.com/espana/extremadura/2026/04/22/maria-guardiola-elegida-presidenta-extremadura-apoyo-vox/,Investida el 22-04-2026; las fuentes dan 23 o 24 de abril
+EX,Extremadura,2026-04-24,,María Guardiola,PP,PP;Vox,Coalición,sí,https://www.elespanol.com/espana/politica/20260424/guardiola-carga-toma-posesion-muros-garantiza-corazon-derechos-sin-vaivenes/1003744221573_0.amp.html,Investida el 22-04-2026
 GA,Galicia,2009-04-18,2022-05-14,Alberto Núñez Feijóo,PP,PP,Un partido,no,,
 GA,Galicia,2022-05-14,,Alfonso Rueda,PP,PP,Un partido,sí,https://www.elprogreso.es/articulo/galicia/rueda-presidente-xunta/202205141146551576873.html,Reelegido en 2024
 RI,La Rioja,2019-08-29,2023-06-30,Concha Andreu,PSOE,PSOE;IU-Podemos,Coalición,no,,
-RI,La Rioja,2023-06-30,,Gonzalo Capellán,PP,PP,Un partido,no,,Fecha de toma de posesión por confirmar
+RI,La Rioja,2023-06-30,,Gonzalo Capellán,PP,PP,Un partido,sí,https://nuevecuatrouno.com/2023/06/30/capellan-tierra-motor-corazon-vida-toma-posesion/,
 MD,Comunidad de Madrid,2021-06-19,,Isabel Díaz Ayuso,PP,PP,Un partido,no,,Entre 2019 y 2021 gobernó con Ciudadanos
 MC,Región de Murcia,2021-03-18,2023-09-11,Fernando López Miras,PP,PP,Un partido,no,,Con consejeros procedentes de Ciudadanos como independientes
 MC,Región de Murcia,2023-09-11,2024-07-12,Fernando López Miras,PP,PP;Vox,Coalición,sí,https://www.orm.es/noticias-2023/lopez-miras-investido-presidente-de-la-region-de-murcia-por-mayoria-absoluta-con-el-apoyo-de-vox/,
 MC,Región de Murcia,2024-07-12,,Fernando López Miras,PP,PP,Un partido,sí,https://srv00.epimg.net/pdf/elpais/1aPagina/2024/07/ep-20240713.pdf,Vox sale del gobierno
 NC,Navarra,2019-08-06,2023-08-17,María Chivite,PSOE,PSOE;Geroa Bai;Podemos,Coalición,no,,
-NC,Navarra,2023-08-17,,María Chivite,PSOE,PSOE;Geroa Bai;Contigo-Zurekin,Coalición,no,https://www.noticiasdenavarra.com/politica/2023/08/18/toma-posesion-chivite-lehendakari-resistencia-7159407.html,Fecha aproximada; consejeros juran el 18-08-2023
+NC,Navarra,2023-08-17,,María Chivite,PSOE,PSOE;Geroa Bai;Contigo-Zurekin,Coalición,sí,https://parlamentodenavarra.es/sites/default/files/noticias-archivos-adjuntos/DISCURSO%20MAR%C3%8DA%20CHIVITE%20CEREMONIA%20TOMA%20POSESION%20MARIA%20CHIVITE%2017-08-23.pdf,consejeros juran el 18-08-2023
 PV,País Vasco,2016-11-26,2024-06-22,Iñigo Urkullu,PNV,PNV;PSE-EE,Coalición,no,,
 PV,País Vasco,2024-06-22,,Imanol Pradales,PNV,PNV;PSE-EE,Coalición,sí,https://www.deia.eus/politica/2024/06/22/directo-imanol-pradales-toma-posesion-8390615.html,
 CE,Ceuta,2001-02-07,,Juan Jesús Vivas,PP,PP,Un partido,no,,

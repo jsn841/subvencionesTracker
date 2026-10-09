@@ -105,6 +105,26 @@
   <li>Cada ficha enlaza a la actividad en d-portal.org, el visor oficial de datos IATI.</li>
 </ul>
 
+<h2>Gobierno en el momento de cada ayuda</h2>
+<p>Cada registro indica qué gobierno estaba en el cargo cuando se concedió la ayuda: los partidos que lo formaban y el partido de quien lo presidía. Sirve para situar cada ayuda en su contexto político.</p>
+<p class="callout">Es un dato de contexto, no una atribución de responsabilidad. Que una ayuda se concediera bajo un gobierno no significa que ese gobierno la decidiera ni que sea irregular. Muchas ayudas proceden de leyes, convenios o compromisos plurianuales aprobados por gobiernos anteriores.</p>
+<h3>Cómo se asigna</h3>
+<ul>
+  <li><strong>Fuente:</strong> una tabla de periodos de gobierno (<code>datos-manuales/gobiernos.csv</code>, en el repositorio) con el presidente o presidenta, los partidos del gobierno, la fecha de toma de posesión y un enlace a la fuente de cada fecha.</li>
+  <li><strong>Regla:</strong> cuenta el gobierno que había tomado posesión en la fecha de concesión. Mientras un gobierno está «en funciones», se asigna al saliente.</li>
+  <li><strong>Si la fuente solo da el año</strong>, como ocurre en los datos de la OCDE, y ese año hubo cambio de gobierno, se indica «Cambio de gobierno en el año» y el importe no se reparte.</li>
+  <li><strong>Coaliciones:</strong> se muestran todos los partidos del gobierno (por ejemplo, «PP + Vox» o «PSOE + Sumar») y, aparte, el partido de quien lo preside. Los partidos aparecen con el nombre con que se presentan; por ejemplo, el PSC en Cataluña.</li>
+</ul>
+<h3>Cobertura actual</h3>
+<ul>
+  <li><strong>Gobierno de España:</strong> desde 1976.</li>
+  <li><strong>Comunidades autónomas, Ceuta y Melilla:</strong> desde el gobierno que estaba en el cargo el 1 de enero de 2022, el periodo que cubren los datos de la BDNS.</li>
+  <li><strong>Ayuntamientos, diputaciones y cabildos:</strong> todavía no. Aparecen como «Gobierno local (pendiente de incorporar)».</li>
+  <li><strong>Universidades, parlamentos y otros organismos</strong> que no dependen de un gobierno: «No aplica».</li>
+  <li><strong>Datos de la OCDE</strong> que agrupan a todas las comunidades o entidades locales sin decir cuál concede: «No identificable en la fuente».</li>
+</ul>
+<p>Cada fecha de cambio de gobierno se ha contrastado con prensa, webs oficiales o boletines, y en la ficha de cada registro se indica si la fecha está verificada. Si encuentras un error, la tabla es pública y se puede corregir.</p>
+
 <h2>Otras limitaciones a tener en cuenta</h2>
 <ul>
   <li>Las fuentes se corrigen con el tiempo. Una cifra puede cambiar entre dos visitas si el organismo que la publica la ha revisado.</li>
