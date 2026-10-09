@@ -88,14 +88,45 @@ def pais_de_region(cod, nombre):
     return (iso3 or cod), T.pais_es(iso3, nombre.title()) if iso3 else nombre.title(), "Europa"
 
 
-def separar_beneficiario(texto):
-    """'G12345678 NOMBRE' -> (identificador, nombre, es_persona_fisica)."""
+# Palabras que solo usan las organizaciones (palabras completas; nunca siglas sueltas como «SA» o «SL»,
+# que coinciden con nombres de pila como Sara o Salvador).
+ORGANIZACION = re.compile(
+    r"\b(FUNDACI[OÓ]N|FUNDACI[OÓ]|FUNDA[CÇ][AÃ]O|FOUNDATION|FONDATION|STIFTUNG|ASOCIACI[OÓ]N|ASOC\.|ASSOCIACI[OÓ]|"
+    r"ASSOCIA[CÇ][AÃ]O|ASSOCIATION|ASSOCIAZIONE|CORPORACI[OÓ]N|CORPORATION|SOCIEDAD|SOCIETY|SOCI[EÉ]T[EÉ]|COOPERATIVA|"
+    r"UNIVERSIDAD|UNIVERSITAT|UNIVERSITY|UNIVERSIT[EÉÀ]|UNIVERSIDADE|INSTITUTO|INSTITUT|INSTITUTE|ACADEMIA|COLEGIO|"
+    r"ESCUELA|CENTRE|CENTER|CLUB|CASA (?:BALEAR|DE|DEL|REGIONAL|DE ESPAÑA)|CENTRO (?:BALEAR|DE|DEL|CULTURAL|REGIONAL|SOCIAL|ESPAÑOL|GALLEGO|ASTURIANO|VASCO|CATAL[AÁ]N|ANDALUZ)|FEDERACI[OÓ]N|CONFEDERACI[OÓ]N|CONGREGACI[OÓ]N|HERMANAS|MISIONERAS|"
+    r"MISIONEROS|DI[OÓ]CESIS|ARZOBISPADO|OBISPADO|PARROQUIA|IGLESIA (?:EVANG[EÉ]LICA|CAT[OÓ]LICA|CRISTIANA|BAUTISTA|ADVENTISTA)|C[AÁ]RITAS|CRUZ ROJA|BANCO (?:DE|DEL|MUNDIAL|INTERAMERICANO|AFRICANO|ASI[AÁ]TICO|EUROPEO)|\) BANCO|BANK|FONDO|FUND|"
+    r"PROGRAMA|PROGRAMME|PROGRAM|NACIONES UNIDAS|UNITED NATIONS|NATIONS UNIES|ONU|UNICEF|UICN|ORGANIZACI[OÓ]N|"
+    r"ORGANIZATION|ORGANISATION|AYUNTAMIENTO|MUNICIPALIDAD|ALCALD[IÍ]A|GOBIERNO|GOVERNMENT|MINISTERIO|MINISTRY|"
+    r"AGENCIA|AGENCY|COMIT[EÉ]|COMMITTEE|CONSEJO|COUNCIL|ALIANZA|ALLIANCE|COALICI[OÓ]N|NETWORK|PLATAFORMA|"
+    r"COORDINADORA|MOVIMIENTO|SINDICATO|C[AÁ]MARA DE|CONSORCIO|CONSORTIUM|HOSPITAL|MUSEO|MUSEUM|EDITORIAL|EDICIONES|"
+    r"S\.A\.|S\.L\.|S\.A\.U\.|S\.L\.U\.|LTD|LIMITED|GMBH|S\.R\.L\.|SARL|ASBL|ONLUS|ONG)\b",
+    re.I)
+
+
+def separar_beneficiario(texto, solo_personas_juridicas=False):
+    """'G12345678 NOMBRE' -> (identificador, nombre, es_persona_fisica).
+
+    La BDNS oculta parte del identificador de las personas físicas, pero también el de muchas
+    entidades extranjeras. Se considera persona física solo si el identificador está oculto y
+    además ni la convocatoria es exclusiva para personas jurídicas ni el nombre contiene una
+    palabra propia de organizaciones. Ante la duda, se protege el nombre."""
     texto = (texto or "").strip()
     ident, _, nombre = texto.partition(" ")
     if not nombre:
         return "", texto, False
-    persona = "*" in ident
-    return ident, nombre.strip(), persona
+    nombre = nombre.strip()
+    if "*" not in ident:
+        return ident, nombre, False
+    if solo_personas_juridicas or ORGANIZACION.search(nombre):
+        return ident, nombre, False
+    return ident, nombre, True
+
+
+def solo_juridicas(info):
+    """True si la convocatoria solo admite personas jurídicas (ninguna categoría de personas físicas)."""
+    tipos = (info or {}).get("beneficiarios") or []
+    return bool(tipos) and not any("FÍSICAS" in t.upper() or "FISICAS" in t.upper() for t in tipos)
 
 
 def convocatoria_info(num):
@@ -168,10 +199,15 @@ def main():
 
     # 3) Convierte al formato común
     nuevos = {}
+    n_personas = n_entidades_ocultas = 0
     for cid, (c, crits, ubic) in encontrados.items():
         num = str(c.get("numeroConvocatoria") or "")
         info = cache.get(num) if num else None
-        ident, nombre, persona = separar_beneficiario(c.get("beneficiario"))
+        ident, nombre, persona = separar_beneficiario(c.get("beneficiario"), solo_juridicas(info))
+        if persona:
+            n_personas += 1
+        elif "*" in ident:
+            n_entidades_ocultas += 1
         p, pn, r = ubic or ("XUN", "País no especificado en la fuente", "Sin especificar")
         fecha = c.get("fechaConcesion") or ""
         tipos_benef = ", ".join((info or {}).get("beneficiarios") or []) or None
@@ -229,6 +265,8 @@ def main():
     st.update({"ultima_comprobacion": now_iso(), "en_fuente": len(nuevos), "altas_ultima": altas,
                "fuera_de_consulta": retirados})
     save_state(state)
+    log(f"Beneficiarios con identificador oculto: {n_personas} tratados como personas físicas, "
+        f"{n_entidades_ocultas} reconocidos como entidades")
     log(f"BDNS: {len(nuevos)} en la fuente, {altas} nuevas, {retirados} conservadas que ya no aparecen")
 
 
