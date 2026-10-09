@@ -34,6 +34,10 @@ jobs:
           cp -r index.html metodologia.html assets data _site/
           rm -f _site/data/bdns/_convocatorias.json
           touch _site/.nojekyll
+          # Fuerza a los navegadores a descargar la versión nueva de estilos y código en cada publicación
+          v="${GITHUB_SHA::8}"
+          sed -i "s#assets/style.css#assets/style.css?v=$v#; s#assets/app.js#assets/app.js?v=$v#; s#assets/vendor/echarts.min.js#assets/vendor/echarts.min.js?v=$v#" _site/index.html
+          sed -i "s#assets/style.css#assets/style.css?v=$v#" _site/metodologia.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
