@@ -1,9 +1,9 @@
 {
  "bdns": {
-  "altas_ultima": 10,
+  "altas_ultima": 0,
   "en_fuente": 26212,
   "fuera_de_consulta": 0,
-  "ultima_comprobacion": "2026-10-09T05:31:22Z"
+  "ultima_comprobacion": "2026-10-09T16:41:23Z"
  },
  "crs": {
   "anios": {
@@ -26,8 +26,10 @@
     "usd_desembolsado": 0.0
    },
    "1998": {
-    "comprobado": "2026-10-06T23:28:51Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:41:36Z",
+    "estado": "ok",
+    "registros": 3045,
+    "usd_desembolsado": 0.0
    },
    "1999": {
     "comprobado": "2026-10-06T23:29:59Z",
@@ -48,12 +50,16 @@
     "usd_desembolsado": 0.0
    },
    "2002": {
-    "comprobado": "2026-10-06T23:33:21Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:43:08Z",
+    "estado": "ok",
+    "registros": 5094,
+    "usd_desembolsado": 1071336343.0
    },
    "2003": {
-    "comprobado": "2026-10-06T23:34:27Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:44:28Z",
+    "estado": "ok",
+    "registros": 4937,
+    "usd_desembolsado": 1345367218.0
    },
    "2004": {
     "comprobado": "2026-10-06T23:35:36Z",
@@ -74,8 +80,10 @@
     "usd_desembolsado": 2287176433.0
    },
    "2007": {
-    "comprobado": "2026-10-06T23:39:02Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:46:19Z",
+    "estado": "ok",
+    "registros": 8084,
+    "usd_desembolsado": 3544504208.0
    },
    "2008": {
     "comprobado": "2026-10-06T23:40:15Z",
@@ -90,12 +98,16 @@
     "usd_desembolsado": 4743196828.0
    },
    "2010": {
-    "comprobado": "2026-10-06T23:42:37Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:49:24Z",
+    "estado": "ok",
+    "registros": 15932,
+    "usd_desembolsado": 4389810737.0
    },
    "2011": {
-    "comprobado": "2026-10-06T23:43:43Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:51:30Z",
+    "estado": "ok",
+    "registros": 12314,
+    "usd_desembolsado": 2582546437.0
    },
    "2012": {
     "comprobado": "2026-10-06T23:44:57Z",
@@ -122,8 +134,10 @@
     "usd_desembolsado": 762452298.0
    },
    "2016": {
-    "comprobado": "2026-10-06T23:49:35Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:53:22Z",
+    "estado": "ok",
+    "registros": 7393,
+    "usd_desembolsado": 2874213302.0
    },
    "2017": {
     "comprobado": "2026-10-06T23:50:47Z",
@@ -132,8 +146,10 @@
     "usd_desembolsado": 1153906827.0
    },
    "2018": {
-    "comprobado": "2026-10-06T23:51:54Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:55:12Z",
+    "estado": "ok",
+    "registros": 7018,
+    "usd_desembolsado": 1235518475.0
    },
    "2019": {
     "comprobado": "2026-10-06T23:53:08Z",
@@ -154,17 +170,19 @@
     "usd_desembolsado": 1582371612.0
    },
    "2022": {
-    "comprobado": "2026-10-06T23:56:42Z",
-    "estado": "sin datos en la API"
+    "comprobado": "2026-10-09T16:57:06Z",
+    "estado": "ok",
+    "registros": 7389,
+    "usd_desembolsado": 2268795374.0
    },
    "2023": {
-    "comprobado": "2026-10-06T23:57:48Z",
+    "comprobado": "2026-10-09T16:59:01Z",
     "estado": "ok",
     "registros": 8096,
     "usd_desembolsado": 1600477837.0
    },
    "2024": {
-    "comprobado": "2026-10-06T23:58:54Z",
+    "comprobado": "2026-10-09T17:00:56Z",
     "estado": "ok",
     "registros": 8116,
     "usd_desembolsado": 1827563597.0
@@ -174,7 +192,7 @@
    1995,
    2024
   ],
-  "ultima_comprobacion": "2026-10-06T23:58:54Z"
+  "ultima_comprobacion": "2026-10-09T17:00:56Z"
  },
  "iati": {
   "actividades": 924,
@@ -186,6 +204,6 @@
   "monedas": {
    "EUR": 2208
   },
-  "ultima_comprobacion": "2026-10-09T05:31:26Z"
+  "ultima_comprobacion": "2026-10-09T16:41:26Z"
  }
 }

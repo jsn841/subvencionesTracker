@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T15:46:11Z",
+ "generado": "2026-10-09T17:01:03Z",
  "capas": {
   "aod": {
    "nombre": "Ayuda Oficial al Desarrollo (CRS de la OCDE)",
@@ -37,6 +37,15 @@
      "usd": 0
     },
     {
+     "anio": 1998,
+     "archivo": "data/aod/1998.json",
+     "bytes": 555263,
+     "registros": 3045,
+     "importe": 0,
+     "importe2": 0,
+     "usd": 0
+    },
+    {
      "anio": 1999,
      "archivo": "data/aod/1999.json",
      "bytes": 575974,
@@ -62,6 +71,24 @@
      "importe": 0,
      "importe2": 1372941492.55,
      "usd": 0
+    },
+    {
+     "anio": 2002,
+     "archivo": "data/aod/2002.json",
+     "bytes": 1126054,
+     "registros": 5094,
+     "importe": 1133001387.19,
+     "importe2": 1231560116.66,
+     "usd": 1071336343.0
+    },
+    {
+     "anio": 2003,
+     "archivo": "data/aod/2003.json",
+     "bytes": 1063328,
+     "registros": 4937,
+     "importe": 1189369099.58,
+     "importe2": 1315879391.15,
+     "usd": 1345367218.0
     },
     {
      "anio": 2004,
@@ -91,6 +118,15 @@
      "usd": 2287176433.0
     },
     {
+     "anio": 2007,
+     "archivo": "data/aod/2007.json",
+     "bytes": 2016148,
+     "registros": 8084,
+     "importe": 2586326892.63,
+     "importe2": 2756772424.96,
+     "usd": 3544504208.0
+    },
+    {
      "anio": 2008,
      "archivo": "data/aod/2008.json",
      "bytes": 2523376,
@@ -107,6 +143,24 @@
      "importe": 3400671497.23,
      "importe2": 3136402932.16,
      "usd": 4743196828.0
+    },
+    {
+     "anio": 2010,
+     "archivo": "data/aod/2010.json",
+     "bytes": 3589061,
+     "registros": 15932,
+     "importe": 3311273706.61,
+     "importe2": 3556558205.49,
+     "usd": 4389810737.0
+    },
+    {
+     "anio": 2011,
+     "archivo": "data/aod/2011.json",
+     "bytes": 3123397,
+     "registros": 12314,
+     "importe": 1855337254.55,
+     "importe2": 1950938157.58,
+     "usd": 2582546437.0
     },
     {
      "anio": 2012,
@@ -145,6 +199,15 @@
      "usd": 762452298.0
     },
     {
+     "anio": 2016,
+     "archivo": "data/aod/2016.json",
+     "bytes": 1763372,
+     "registros": 7393,
+     "importe": 2596625908.56,
+     "importe2": 2666042947.22,
+     "usd": 2874213302.0
+    },
+    {
      "anio": 2017,
      "archivo": "data/aod/2017.json",
      "bytes": 1413953,
@@ -152,6 +215,15 @@
      "importe": 1021444678.77,
      "importe2": 1042615692.9,
      "usd": 1153906827.0
+    },
+    {
+     "anio": 2018,
+     "archivo": "data/aod/2018.json",
+     "bytes": 1678259,
+     "registros": 7018,
+     "importe": 1046203274.89,
+     "importe2": 1128224241.88,
+     "usd": 1235518475.0
     },
     {
      "anio": 2019,
@@ -179,6 +251,15 @@
      "importe": 1337885922.37,
      "importe2": 1370866002.09,
      "usd": 1582371612.0
+    },
+    {
+     "anio": 2022,
+     "archivo": "data/aod/2022.json",
+     "bytes": 1845334,
+     "registros": 7389,
+     "importe": 2154501978.08,
+     "importe2": 2367251900.55,
+     "usd": 2268795374.0
     },
     {
      "anio": 2023,
@@ -220,8 +301,10 @@
       "usd_desembolsado": 0.0
      },
      "1998": {
-      "comprobado": "2026-10-06T23:28:51Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:41:36Z",
+      "estado": "ok",
+      "registros": 3045,
+      "usd_desembolsado": 0.0
      },
      "1999": {
       "comprobado": "2026-10-06T23:29:59Z",
@@ -242,12 +325,16 @@
       "usd_desembolsado": 0.0
      },
      "2002": {
-      "comprobado": "2026-10-06T23:33:21Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:43:08Z",
+      "estado": "ok",
+      "registros": 5094,
+      "usd_desembolsado": 1071336343.0
      },
      "2003": {
-      "comprobado": "2026-10-06T23:34:27Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:44:28Z",
+      "estado": "ok",
+      "registros": 4937,
+      "usd_desembolsado": 1345367218.0
      },
      "2004": {
       "comprobado": "2026-10-06T23:35:36Z",
@@ -268,8 +355,10 @@
       "usd_desembolsado": 2287176433.0
      },
      "2007": {
-      "comprobado": "2026-10-06T23:39:02Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:46:19Z",
+      "estado": "ok",
+      "registros": 8084,
+      "usd_desembolsado": 3544504208.0
      },
      "2008": {
       "comprobado": "2026-10-06T23:40:15Z",
@@ -284,12 +373,16 @@
       "usd_desembolsado": 4743196828.0
      },
      "2010": {
-      "comprobado": "2026-10-06T23:42:37Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:49:24Z",
+      "estado": "ok",
+      "registros": 15932,
+      "usd_desembolsado": 4389810737.0
      },
      "2011": {
-      "comprobado": "2026-10-06T23:43:43Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:51:30Z",
+      "estado": "ok",
+      "registros": 12314,
+      "usd_desembolsado": 2582546437.0
      },
      "2012": {
       "comprobado": "2026-10-06T23:44:57Z",
@@ -316,8 +409,10 @@
       "usd_desembolsado": 762452298.0
      },
      "2016": {
-      "comprobado": "2026-10-06T23:49:35Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:53:22Z",
+      "estado": "ok",
+      "registros": 7393,
+      "usd_desembolsado": 2874213302.0
      },
      "2017": {
       "comprobado": "2026-10-06T23:50:47Z",
@@ -326,8 +421,10 @@
       "usd_desembolsado": 1153906827.0
      },
      "2018": {
-      "comprobado": "2026-10-06T23:51:54Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:55:12Z",
+      "estado": "ok",
+      "registros": 7018,
+      "usd_desembolsado": 1235518475.0
      },
      "2019": {
       "comprobado": "2026-10-06T23:53:08Z",
@@ -348,17 +445,19 @@
       "usd_desembolsado": 1582371612.0
      },
      "2022": {
-      "comprobado": "2026-10-06T23:56:42Z",
-      "estado": "sin datos en la API"
+      "comprobado": "2026-10-09T16:57:06Z",
+      "estado": "ok",
+      "registros": 7389,
+      "usd_desembolsado": 2268795374.0
      },
      "2023": {
-      "comprobado": "2026-10-06T23:57:48Z",
+      "comprobado": "2026-10-09T16:59:01Z",
       "estado": "ok",
       "registros": 8096,
       "usd_desembolsado": 1600477837.0
      },
      "2024": {
-      "comprobado": "2026-10-06T23:58:54Z",
+      "comprobado": "2026-10-09T17:00:56Z",
       "estado": "ok",
       "registros": 8116,
       "usd_desembolsado": 1827563597.0
@@ -368,7 +467,7 @@
      1995,
      2024
     ],
-    "ultima_comprobacion": "2026-10-06T23:58:54Z"
+    "ultima_comprobacion": "2026-10-09T17:00:56Z"
    }
   },
   "bdns": {
@@ -409,7 +508,7 @@
     {
      "anio": 2025,
      "archivo": "data/bdns/2025.json",
-     "bytes": 3077765,
+     "bytes": 3097446,
      "registros": 8095,
      "importe": 789765660.59,
      "importe2": 789765660.59,
@@ -418,7 +517,7 @@
     {
      "anio": 2026,
      "archivo": "data/bdns/2026.json",
-     "bytes": 996897,
+     "bytes": 1002445,
      "registros": 2383,
      "importe": 396776491.48,
      "importe2": 396776491.48,
@@ -426,10 +525,10 @@
     }
    ],
    "estado": {
-    "altas_ultima": 10,
+    "altas_ultima": 0,
     "en_fuente": 26212,
     "fuera_de_consulta": 0,
-    "ultima_comprobacion": "2026-10-09T05:31:22Z"
+    "ultima_comprobacion": "2026-10-09T16:41:23Z"
    }
   },
   "iati": {
@@ -478,14 +577,14 @@
     "monedas": {
      "EUR": 2208
     },
-    "ultima_comprobacion": "2026-10-09T05:31:26Z"
+    "ultima_comprobacion": "2026-10-09T16:41:26Z"
    }
   }
  },
  "region_por_pais": {
   "PER": "Sudamérica",
-  "MAR": "Norte de África",
   "BOL": "Sudamérica",
+  "MAR": "Norte de África",
   "GTM": "Caribe y Centroamérica",
   "COL": "Sudamérica",
   "SLV": "Caribe y Centroamérica",
@@ -497,143 +596,143 @@
   "DOM": "Caribe y Centroamérica",
   "PSE": "Oriente Medio",
   "MEX": "Caribe y Centroamérica",
-  "MOZ": "África subsahariana",
   "A_X": "América (varios países)",
+  "MOZ": "África subsahariana",
   "ARG": "Sudamérica",
   "BRA": "Sudamérica",
   "IND": "Asia meridional y central",
-  "COD": "África subsahariana",
   "PRY": "Sudamérica",
+  "COD": "África subsahariana",
+  "HTI": "Caribe y Centroamérica",
   "MLI": "África subsahariana",
   "MRT": "África subsahariana",
-  "VEN": "Sudamérica",
   "ETH": "África subsahariana",
-  "HTI": "Caribe y Centroamérica",
+  "VEN": "Sudamérica",
   "CHL": "Sudamérica",
-  "GNQ": "África subsahariana",
-  "PHL": "Asia oriental",
   "DZA": "Norte de África",
   "CRI": "Caribe y Centroamérica",
-  "PAN": "Caribe y Centroamérica",
-  "BFA": "África subsahariana",
   "URY": "Sudamérica",
-  "CHN": "Asia oriental",
-  "CMR": "África subsahariana",
+  "PAN": "Caribe y Centroamérica",
+  "GNQ": "África subsahariana",
+  "PHL": "Asia oriental",
+  "BFA": "África subsahariana",
   "TUN": "Norte de África",
   "F_X": "África (varios países)",
-  "NER": "África subsahariana",
-  "E_X": "Europa",
-  "LBN": "Oriente Medio",
+  "CHN": "Asia oriental",
+  "CMR": "África subsahariana",
   "AGO": "África subsahariana",
+  "NER": "África subsahariana",
+  "LBN": "Oriente Medio",
   "KEN": "África subsahariana",
-  "GNB": "África subsahariana",
-  "CIV": "África subsahariana",
   "CPV": "África subsahariana",
-  "SYR": "Oriente Medio",
-  "TZA": "África subsahariana",
-  "BIH": "Europa",
+  "GNB": "África subsahariana",
+  "E_X": "Europa",
+  "CIV": "África subsahariana",
   "EGY": "Norte de África",
-  "TCD": "África subsahariana",
+  "TZA": "África subsahariana",
+  "SYR": "Oriente Medio",
   "JOR": "Oriente Medio",
+  "BIH": "Europa",
+  "TCD": "África subsahariana",
   "TGO": "África subsahariana",
-  "RWA": "África subsahariana",
-  "UGA": "África subsahariana",
   "GHA": "África subsahariana",
+  "RWA": "África subsahariana",
   "VNM": "Asia oriental",
-  "IDN": "Asia oriental",
+  "UGA": "África subsahariana",
   "BEN": "África subsahariana",
-  "SLE": "África subsahariana",
+  "IDN": "Asia oriental",
   "SRB": "Europa",
   "TUR": "Europa",
   "AFG": "Asia meridional y central",
-  "NAM": "África subsahariana",
-  "SDN": "África subsahariana",
-  "GMB": "África subsahariana",
-  "NGA": "África subsahariana",
+  "SLE": "África subsahariana",
   "UKR": "Europa",
+  "NAM": "África subsahariana",
+  "GMB": "África subsahariana",
+  "SDN": "África subsahariana",
   "PAK": "Asia meridional y central",
+  "NGA": "África subsahariana",
   "ALB": "Europa",
-  "MDG": "África subsahariana",
-  "KHM": "Asia oriental",
   "IRQ": "Oriente Medio",
+  "KHM": "Asia oriental",
+  "MDG": "África subsahariana",
   "NPL": "Asia meridional y central",
   "MWI": "África subsahariana",
   "GIN": "África subsahariana",
   "BDI": "África subsahariana",
-  "LKA": "Asia meridional y central",
   "ZAF": "África subsahariana",
   "ZWE": "África subsahariana",
   "COG": "África subsahariana",
+  "LKA": "Asia meridional y central",
   "CAF": "África subsahariana",
-  "IRN": "Oriente Medio",
-  "THA": "Asia oriental",
   "BGD": "Asia meridional y central",
-  "LBR": "África subsahariana",
-  "JAM": "Caribe y Centroamérica",
-  "S_X": "Asia (varios países)",
+  "THA": "Asia oriental",
+  "IRN": "Oriente Medio",
   "STP": "África subsahariana",
+  "LBR": "África subsahariana",
+  "S_X": "Asia (varios países)",
+  "JAM": "Caribe y Centroamérica",
   "GAB": "África subsahariana",
-  "KAZ": "Asia meridional y central",
-  "MYS": "Asia oriental",
-  "GEO": "Asia meridional y central",
   "TLS": "Asia oriental",
+  "SOM": "África subsahariana",
   "BLR": "Europa",
+  "KAZ": "Asia meridional y central",
+  "GEO": "Asia meridional y central",
+  "MYS": "Asia oriental",
+  "LBY": "Norte de África",
+  "HRV": "Europa",
+  "ARM": "Asia meridional y central",
+  "YEM": "Oriente Medio",
   "SSD": "África subsahariana",
   "ZMB": "África subsahariana",
-  "ARM": "Asia meridional y central",
-  "HRV": "Europa",
-  "LBY": "Norte de África",
-  "YEM": "Oriente Medio",
-  "SOM": "África subsahariana",
   "UZB": "Asia meridional y central",
-  "MKD": "Europa",
   "MDA": "Europa",
+  "MKD": "Europa",
   "ERI": "África subsahariana",
   "KGZ": "Asia meridional y central",
+  "BLZ": "Caribe y Centroamérica",
   "AZE": "Asia meridional y central",
   "MMR": "Asia meridional y central",
-  "BLZ": "Caribe y Centroamérica",
-  "TJK": "Asia meridional y central",
   "MNG": "Asia oriental",
+  "DJI": "África subsahariana",
+  "TJK": "Asia meridional y central",
   "TTO": "Caribe y Centroamérica",
   "XKV": "Europa",
-  "SVN": "Europa",
-  "BRB": "Caribe y Centroamérica",
   "MNE": "Europa",
-  "DMA": "Caribe y Centroamérica",
   "PRK": "Asia oriental",
-  "PNG": "Oceanía",
-  "BWA": "África subsahariana",
-  "DJI": "África subsahariana",
+  "SVN": "Europa",
   "O_X": "Oceanía",
-  "TKM": "Asia meridional y central",
-  "WSM": "Oceanía",
-  "MLT": "Europa",
+  "BRB": "Caribe y Centroamérica",
   "SYC": "África subsahariana",
+  "DMA": "Caribe y Centroamérica",
+  "PNG": "Oceanía",
   "GUY": "Sudamérica",
-  "SUR": "Sudamérica",
-  "SWZ": "África subsahariana",
-  "LSO": "África subsahariana",
+  "TKM": "Asia meridional y central",
   "LCA": "Caribe y Centroamérica",
+  "BWA": "África subsahariana",
+  "MUS": "África subsahariana",
+  "MLT": "Europa",
+  "WSM": "Oceanía",
+  "ATG": "Caribe y Centroamérica",
   "VUT": "Oceanía",
   "LAO": "Asia oriental",
+  "SWZ": "África subsahariana",
+  "LSO": "África subsahariana",
+  "SUR": "Sudamérica",
   "OMN": "Oriente Medio",
-  "ATG": "Caribe y Centroamérica",
-  "MUS": "África subsahariana",
-  "KOR": "Asia oriental",
-  "GRD": "Caribe y Centroamérica",
-  "VCT": "Caribe y Centroamérica",
   "COM": "África subsahariana",
-  "SAU": "Oriente Medio",
-  "TON": "Oceanía",
   "MDV": "Asia meridional y central",
-  "PLW": "Oceanía",
-  "SLB": "Oceanía",
+  "GRD": "Caribe y Centroamérica",
+  "KOR": "Asia oriental",
+  "TON": "Oceanía",
+  "VCT": "Caribe y Centroamérica",
   "KNA": "Caribe y Centroamérica",
-  "TUV": "Oceanía",
+  "SAU": "Oriente Medio",
   "FSM": "Oceanía",
-  "FJI": "Oceanía",
+  "PLW": "Oceanía",
   "BTN": "Asia meridional y central",
+  "TUV": "Oceanía",
+  "SLB": "Oceanía",
+  "FJI": "Oceanía",
   "MHL": "Oceanía"
  },
  "tipos_cambio": {
