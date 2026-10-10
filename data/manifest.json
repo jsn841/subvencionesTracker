@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-09T17:01:03Z",
+ "generado": "2026-10-10T05:28:30Z",
  "capas": {
   "aod": {
    "nombre": "Ayuda Oficial al Desarrollo (CRS de la OCDE)",
@@ -481,7 +481,7 @@
     {
      "anio": 2022,
      "archivo": "data/bdns/2022.json",
-     "bytes": 1994734,
+     "bytes": 1994741,
      "registros": 5029,
      "importe": 735928109.27,
      "importe2": 735928109.27,
@@ -490,7 +490,7 @@
     {
      "anio": 2023,
      "archivo": "data/bdns/2023.json",
-     "bytes": 2184730,
+     "bytes": 2184750,
      "registros": 5476,
      "importe": 1413544469.24,
      "importe2": 1413544168.64,
@@ -499,7 +499,7 @@
     {
      "anio": 2024,
      "archivo": "data/bdns/2024.json",
-     "bytes": 2101614,
+     "bytes": 2101634,
      "registros": 5229,
      "importe": 965335748.18,
      "importe2": 965335748.18,
@@ -508,7 +508,7 @@
     {
      "anio": 2025,
      "archivo": "data/bdns/2025.json",
-     "bytes": 3097446,
+     "bytes": 3097453,
      "registros": 8095,
      "importe": 789765660.59,
      "importe2": 789765660.59,
@@ -517,18 +517,18 @@
     {
      "anio": 2026,
      "archivo": "data/bdns/2026.json",
-     "bytes": 1002445,
-     "registros": 2383,
-     "importe": 396776491.48,
-     "importe2": 396776491.48,
+     "bytes": 1016556,
+     "registros": 2413,
+     "importe": 400925399.29,
+     "importe2": 400925399.29,
      "usd": 0
     }
    ],
    "estado": {
-    "altas_ultima": 0,
-    "en_fuente": 26212,
+    "altas_ultima": 30,
+    "en_fuente": 26242,
     "fuera_de_consulta": 0,
-    "ultima_comprobacion": "2026-10-09T16:41:23Z"
+    "ultima_comprobacion": "2026-10-10T05:28:17Z"
    }
   },
   "iati": {
@@ -577,7 +577,7 @@
     "monedas": {
      "EUR": 2208
     },
-    "ultima_comprobacion": "2026-10-09T16:41:26Z"
+    "ultima_comprobacion": "2026-10-10T05:28:22Z"
    }
   }
  },
