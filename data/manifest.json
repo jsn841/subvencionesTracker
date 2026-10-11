@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-10T05:28:30Z",
+ "generado": "2026-10-11T05:28:21Z",
  "capas": {
   "aod": {
    "nombre": "Ayuda Oficial al Desarrollo (CRS de la OCDE)",
@@ -481,10 +481,10 @@
     {
      "anio": 2022,
      "archivo": "data/bdns/2022.json",
-     "bytes": 1994741,
+     "bytes": 1994742,
      "registros": 5029,
-     "importe": 735928109.27,
-     "importe2": 735928109.27,
+     "importe": 735972501.27,
+     "importe2": 735972501.27,
      "usd": 0
     },
     {
@@ -508,7 +508,7 @@
     {
      "anio": 2025,
      "archivo": "data/bdns/2025.json",
-     "bytes": 3097453,
+     "bytes": 3097466,
      "registros": 8095,
      "importe": 789765660.59,
      "importe2": 789765660.59,
@@ -517,18 +517,18 @@
     {
      "anio": 2026,
      "archivo": "data/bdns/2026.json",
-     "bytes": 1016556,
-     "registros": 2413,
-     "importe": 400925399.29,
-     "importe2": 400925399.29,
+     "bytes": 1017880,
+     "registros": 2416,
+     "importe": 401730397.79,
+     "importe2": 401730397.79,
      "usd": 0
     }
    ],
    "estado": {
-    "altas_ultima": 30,
-    "en_fuente": 26242,
+    "altas_ultima": 3,
+    "en_fuente": 26245,
     "fuera_de_consulta": 0,
-    "ultima_comprobacion": "2026-10-10T05:28:17Z"
+    "ultima_comprobacion": "2026-10-11T05:28:10Z"
    }
   },
   "iati": {
@@ -577,7 +577,7 @@
     "monedas": {
      "EUR": 2208
     },
-    "ultima_comprobacion": "2026-10-10T05:28:22Z"
+    "ultima_comprobacion": "2026-10-11T05:28:14Z"
    }
   }
  },
