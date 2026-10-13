@@ -1,9 +1,9 @@
 {
  "bdns": {
-  "altas_ultima": 0,
-  "en_fuente": 26245,
+  "altas_ultima": 2,
+  "en_fuente": 26247,
   "fuera_de_consulta": 0,
-  "ultima_comprobacion": "2026-10-12T05:31:20Z"
+  "ultima_comprobacion": "2026-10-13T05:32:03Z"
  },
  "crs": {
   "anios": {
@@ -204,6 +204,6 @@
   "monedas": {
    "EUR": 2208
   },
-  "ultima_comprobacion": "2026-10-12T05:31:23Z"
+  "ultima_comprobacion": "2026-10-13T05:32:07Z"
  }
 }
