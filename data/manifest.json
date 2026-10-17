@@ -1,5 +1,5 @@
 {
- "generado": "2026-10-16T05:40:31Z",
+ "generado": "2026-10-17T05:37:42Z",
  "capas": {
   "aod": {
    "nombre": "Ayuda Oficial al Desarrollo (CRS de la OCDE)",
@@ -481,7 +481,7 @@
     {
      "anio": 2022,
      "archivo": "data/bdns/2022.json",
-     "bytes": 1994742,
+     "bytes": 1994729,
      "registros": 5029,
      "importe": 735972501.27,
      "importe2": 735972501.27,
@@ -508,7 +508,7 @@
     {
      "anio": 2025,
      "archivo": "data/bdns/2025.json",
-     "bytes": 3097827,
+     "bytes": 3097814,
      "registros": 8096,
      "importe": 789765660.59,
      "importe2": 789765660.59,
@@ -517,18 +517,18 @@
     {
      "anio": 2026,
      "archivo": "data/bdns/2026.json",
-     "bytes": 1031739,
-     "registros": 2452,
-     "importe": 410116955.82,
-     "importe2": 410116955.82,
+     "bytes": 1032353,
+     "registros": 2453,
+     "importe": 410216955.82,
+     "importe2": 410216955.82,
      "usd": 0
     }
    ],
    "estado": {
-    "altas_ultima": 14,
-    "en_fuente": 26282,
+    "altas_ultima": 1,
+    "en_fuente": 26283,
     "fuera_de_consulta": 0,
-    "ultima_comprobacion": "2026-10-16T05:40:20Z"
+    "ultima_comprobacion": "2026-10-17T05:37:34Z"
    }
   },
   "iati": {
@@ -577,7 +577,7 @@
     "monedas": {
      "EUR": 2208
     },
-    "ultima_comprobacion": "2026-10-16T05:40:23Z"
+    "ultima_comprobacion": "2026-10-17T05:37:38Z"
    }
   }
  },
