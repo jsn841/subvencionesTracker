@@ -3,7 +3,7 @@
   "altas_ultima": 0,
   "en_fuente": 26283,
   "fuera_de_consulta": 0,
-  "ultima_comprobacion": "2026-10-18T05:38:45Z"
+  "ultima_comprobacion": "2026-10-19T05:39:58Z"
  },
  "crs": {
   "anios": {
@@ -170,19 +170,19 @@
     "usd_desembolsado": 1582371612.0
    },
    "2022": {
-    "comprobado": "2026-10-12T05:32:28Z",
+    "comprobado": "2026-10-19T05:41:06Z",
     "estado": "ok",
     "registros": 7389,
     "usd_desembolsado": 2268795374.0
    },
    "2023": {
-    "comprobado": "2026-10-12T05:34:26Z",
+    "comprobado": "2026-10-19T05:43:49Z",
     "estado": "ok",
     "registros": 8096,
     "usd_desembolsado": 1600477837.0
    },
    "2024": {
-    "comprobado": "2026-10-12T05:36:24Z",
+    "comprobado": "2026-10-19T05:45:53Z",
     "estado": "ok",
     "registros": 8116,
     "usd_desembolsado": 1827563597.0
@@ -192,7 +192,7 @@
    1995,
    2024
   ],
-  "ultima_comprobacion": "2026-10-12T05:36:24Z"
+  "ultima_comprobacion": "2026-10-19T05:45:53Z"
  },
  "iati": {
   "actividades": 924,
@@ -204,6 +204,6 @@
   "monedas": {
    "EUR": 2208
   },
-  "ultima_comprobacion": "2026-10-18T05:38:49Z"
+  "ultima_comprobacion": "2026-10-19T05:40:03Z"
  }
 }
